@@ -1,0 +1,67 @@
+@mixin background-image ($pict, $ext) {
+  background-image: url("../img/#{$pict}.#{$ext}");
+
+  @media (#{$blink-detector}: 0) and (min-resolution: 0.001dpcm) {
+    background-image: url("../img/#{$pict}.webp");
+  }
+}
+
+@mixin font-face ($family, $weight, $style, $local, $url) {
+  @font-face {
+    font-style: $style;
+    font-weight: $weight;
+    font-family: "#{$family}";
+    font-display: swap;
+    src: local("#{$local}"), url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@mixin bg-icon {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin chevron-base ($thickness: 2px, $size: 100%, $color: inherit) {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+  color: $color;
+  border-bottom: $thickness solid;
+  border-left: $thickness solid;
+  border-radius: $thickness;
+}
+
+@mixin cross-icon ($size, $thickness) {
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: ($size / 2) - ($thickness / 2);
+    left: 0;
+    width: $size;
+    height: $thickness;
+    background-color: currentColor;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

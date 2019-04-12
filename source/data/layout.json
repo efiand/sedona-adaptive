@@ -1,0 +1,27 @@
+{
+  "siteName": "Седона",
+  "titleDelimiter": " › ",
+  "logoSrc": "img/logo.svg",
+  "logoAlt": "Логотип Седоны",
+  "toggleMenuText": "Показать или скрыть меню",
+  "introImg": "img/intro.svg",
+  "introAlt": "Эмблема Седоны",
+  "menu": [
+    {
+      "url": "index.html",
+      "text": "Главная"
+    },
+    {
+      "url": "photo.html",
+      "text": "Фото и видео"
+    },
+    {
+      "url": "form.html",
+      "text": "Форма отзыва"
+    },
+    {
+      "url": "https://htmlacademy.ru/intensive/adaptive",
+      "text": "HTML Academy"
+    }
+  ]
+}

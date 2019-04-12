@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Оставьте свой отзыв",
+  "components": [
+    {
+      "name": "intro",
+      "params": {
+        "heading": "",
+        "text": ""
+      }
+    }
+  ]
+}

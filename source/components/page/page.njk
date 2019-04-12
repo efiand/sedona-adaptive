@@ -1,0 +1,29 @@
+{% set data = page | getData %}
+
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <title>{{ data.siteName }}{{ data.titleDelimiter }}{{ data.pageTitle }}</title>
+  <link rel="stylesheet" href="css/style{{ minSuffix }}.css">
+</head>
+
+<body class="page__body">
+  {% include "source/components/header/header.njk" %}
+
+  <main class="page__main">
+    {% for component in components %}
+      {% set params = component.params %}
+      {% include "source/components/" + component.name + "/" + component.name + ".njk" %}
+    {% endfor %}
+  </main>
+
+  {% include "source/components/footer/footer.njk" %}
+
+  <script src="js/scripts{{ minSuffix }}.js"></script>
+</body>
+</html>

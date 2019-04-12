@@ -1,0 +1,65 @@
+{
+  "template": "source/components/page/page.njk",
+  "tasks": {
+    "build": [
+      "clean",
+      "tmp",
+      "css",
+      "scripts",
+      "html",
+      "img",
+      "icons",
+      "symbols",
+      "webp",
+      "static"
+    ],
+    "dev": [
+      "build",
+      "server"
+    ]
+  },
+  "watchers": [
+    [
+      ["source/**/*.js"],
+      ["scripts"]
+    ],
+    [
+      ["source/**/*.scss"],
+      ["css"]
+    ],
+    [
+      ["source/data/**/*.json", "source/**/*.njk"],
+      ["html"]
+    ],
+    [
+      "source/img/**/*.{jpg,png}",
+      ["img", "webp"]
+    ],
+    [
+      "source/img/**/*.svg",
+      ["img"]
+    ],
+    [
+      "source/img/icons/**/*.svg",
+      ["icons"]
+    ],
+    [
+      "source/img/symbols/**/*.svg",
+      ["symbols"]
+    ],
+    [
+      "source/static/**/*",
+      ["static"]
+    ]
+  ],
+  "dest": "build",
+  "lintspaces": {
+    "editorconfig": ".editorconfig"
+  },
+  "rename": {
+    "suffix": ".min"
+  },
+  "server": {
+    "server": "build"
+  }
+}

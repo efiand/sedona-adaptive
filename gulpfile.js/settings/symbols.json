@@ -1,0 +1,14 @@
+{
+  "src": [
+    "source/img/symbols/**/*.svg",
+    "source/components/**/*.symbol.svg"
+  ],
+  "options": {
+    "inlineSvg": true
+  },
+  "dest": {
+    "icons": "tmp/symbols",
+    "sprite": "build/img"
+  },
+  "filename": "symbols.svg"
+}

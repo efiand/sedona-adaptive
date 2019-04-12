@@ -1,0 +1,10 @@
+{
+  "isIndex": true,
+  "titleDelimiter": "",
+  "introImg": "img/intro-index.svg",
+  "components": [
+    {
+      "name": "reasons"
+    }
+  ]
+}

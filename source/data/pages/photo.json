@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Фото и видео",
+  "components": [
+    {
+      "name": "intro",
+      "params": {
+        "heading": "",
+        "text": ""
+      }
+    }
+  ]
+}

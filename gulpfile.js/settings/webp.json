@@ -1,0 +1,7 @@
+{
+  "src": "source/img/**/*.{jpg,png}",
+  "options": {
+    "quality": 82
+  },
+  "dest": "build/img"
+}

@@ -1,0 +1,4 @@
+<picture class="picture">
+  <source type="image/webp" srcset="{{ params.src | withoutExt }}.webp"/>
+  <img class="picture__img {{ params.class }}" src="{{ params.src }}" alt="{{ params.alt }}">
+</picture>

@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  vertical-align: top;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: color, opacity, background-color, border-color, box-shadow;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:not(:disabled):hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.3;
+  }
+}
