@@ -1,0 +1,46 @@
+<section class="advantages">
+  <h2 class="visually-hidden">
+    {{ params.heading }}
+  </h2>
+  <b class="advantages__heading">
+    {{ params.lead }}
+  </b>
+  <p class="advantages__description">
+    {{ params.description }}
+  </p>
+
+  <ol class="advantages__list page__list">
+    {% for item in params.list %}
+      {% if item.picture %}
+        <li class="advantages__item advantages__item--with-img">
+          <div class="advantages__info advantages__info--with-img">
+            <b class="advantages__item-heading">
+              {{ item.title }}
+            </b>
+            <p class="advantages__item-description advantages__item-description--with-img">
+              {{ item.description }}
+            </p>
+          </div>
+
+          {% set picture = item.picture %}
+          {% include "components/_picture/picture.njk" %}
+
+          {% if item.features %}
+            {% set features = item.features %}
+            {% include "components/features/features.njk" %}
+          {% endif %}
+        </li>
+
+      {% else %}
+        <li class="advantages__item advantages__info">
+          <b class="advantages__item-heading">
+            {{ item.title }}
+          </b>
+          <p class="advantages__item-description">
+            {{ item.description }}
+          </p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</section>

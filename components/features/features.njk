@@ -1,0 +1,12 @@
+<ul class="features page__list {{ features.classes }}">
+  {% for item in features.list %}
+    <li class="features__item {{ item.modifier }}">
+      <b class="features__heading">
+        {{ item.heading }}
+      </b>
+      <p class="features__description">
+        {{ item.description }}
+      </p>
+    </li>
+  {% endfor %}
+</ul>

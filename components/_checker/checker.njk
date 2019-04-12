@@ -1,0 +1,8 @@
+<li class="checker {{ classes }}">
+  <input class="visually-hidden" id="{{ field.name }}-{{ loop.index }}" name="{{ field.name }}"
+    type="{{ field.type }}"{{ " checked" if field.checked }}>
+  <label class="checker__label {{ "checker__label--checkbox" if field.type === "checkbox" }}"
+    for="{{ field.name }}-{{ loop.index }}">
+    {{ field.label }}
+  </label>
+</li>

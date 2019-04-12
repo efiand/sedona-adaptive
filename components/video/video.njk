@@ -1,0 +1,32 @@
+<section class="video">
+  <h2 class="visually-hidden">
+    {{ params.heading }}
+  </h2>
+  <b class="video__lead">
+    {{ params.lead }}
+  </b>
+  <p class="video__description">
+    {{ params.description }}
+  </p>
+
+  <div class="video__src-wrapper">
+    <video class="video__src" src="{{ params.src }}"></video>
+  </div>
+
+  <ul class="video__controls page__list">
+    {% for control in params.controls %}
+      <li class="video__controls-item video__controls-item--{{ control.alias }}">
+        <button class="video__control video__control--{{ control.alias }}">
+          <span class="visually-hidden">
+            {{ control.title }}
+          </span>
+          {% if control.width %}
+            <svg class="video__icon" role="presentation" width="{{ control.width }}" height="{{ control.height }}">
+              <use xlink:href="img/symbols.svg#{{ control.alias }}" />
+            </svg>
+          {% endif %}
+        </button>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
