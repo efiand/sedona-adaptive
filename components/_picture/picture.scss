@@ -1,0 +1,14 @@
+.picture {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.picture__img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  transform: translateY(-50%);
+}

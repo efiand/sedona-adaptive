@@ -1,0 +1,38 @@
+@mixin font-face ($family, $weight, $style, $local, $url) {
+  @font-face {
+    font-style: $style;
+    font-weight: $weight;
+    font-family: "#{$family}";
+    font-display: swap;
+    src: local("#{$local}"), url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@mixin interactive {
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: color, opacity, background-color, border-color, box-shadow;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@mixin background-image ($pict, $ext) {
+  background-image: url("../img/#{$pict}.#{$ext}");
+
+  @media ($retina) {
+    background-image: url("../img/#{$pict}@2x.#{$ext}");
+  }
+
+  @media ($webp) {
+    background-image: url("../img/#{$pict}.webp");
+  }
+
+  @media ($retina-webp) {
+    background-image: url("../img/#{$pict}@2x.webp");
+  }
+}

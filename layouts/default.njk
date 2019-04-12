@@ -1,0 +1,33 @@
+{% set layout = page | getData %}
+
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <title>{{ layout.siteName }}{{ layout.titleDelimiter }}{{ layout.pageTitle }}</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body class="page__body">
+  {% include "components/header/header.njk" %}
+
+  <main class="page__main">
+    {% for component in layout.components %}
+      {% set params = component.params %}
+      {% include "components/" + component.name + "/" + component.name + ".njk" %}
+    {% endfor %}
+  </main>
+
+  {% include "components/footer/footer.njk" %}
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

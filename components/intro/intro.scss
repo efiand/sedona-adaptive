@@ -1,0 +1,158 @@
+.intro {
+  position: relative;
+  padding: 196px 0 0;
+  border-top: 54px solid transparent;
+
+  @media ($tablet) {
+    padding: 365px 0 0;
+    border: none;
+  }
+
+  @media ($desktop) {
+    padding: 412px 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-color: rgba($color-accent-back, 0.33);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 768px auto;
+
+    @include background-image("intro-back", "jpg");
+
+    @media ($tablet) {
+      height: 290px;
+      background-size: cover;
+
+      @include background-image("intro-back-desktop", "jpg");
+    }
+
+    @media ($desktop) {
+      height: 300px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 134px;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    background-image: url("../img/intro-decor.svg");
+    background-size: 100% 26px;
+
+    @media ($tablet) {
+      top: 234px;
+      height: 56px;
+      background-image: url("../img/intro-decor-tablet.svg");
+      background-size: 100% 56px;
+    }
+
+    @media ($desktop) {
+      top: 244px;
+      background-image: url("../img/intro-decor-desktop.svg");
+    }
+  }
+
+  &--index {
+    padding: 430px 0 0;
+
+    @media ($tablet) {
+      padding: 568px 0 0;
+    }
+
+    @media ($desktop) {
+      padding: 568px 0 0;
+    }
+
+    &::before {
+      height: 390px;
+      background-position: 50% 0;
+
+      @media ($tablet) {
+        height: 518px;
+      }
+
+      @media ($desktop) {
+        height: 518px;
+      }
+    }
+
+    &::after {
+      top: 364px;
+
+      @media ($tablet) {
+        top: 462px;
+      }
+
+      @media ($desktop) {
+        top: 462px;
+      }
+    }
+  }
+}
+
+.intro__img {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media ($tablet) {
+    top: 95px;
+    width: 460px;
+  }
+
+  @media ($desktop) {
+    top: 102px;
+  }
+
+  &--index {
+    top: 90px;
+
+    @media ($tablet) {
+      top: 78px;
+    }
+
+    @media ($desktop) {
+      top: 80px;
+    }
+  }
+}
+
+.intro__heading {
+  margin: 0 24px 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+
+  @media ($tablet) {
+    margin: 0 24px 32px;
+    font-size: 30px;
+  }
+}
+
+.intro__description {
+  max-width: 445px;
+  margin: 0 auto 16px;
+  padding: 0 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-description;
+
+  @media ($tablet) {
+    margin-bottom: 68px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 58px;
+  }
+}

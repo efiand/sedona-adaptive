@@ -1,0 +1,26 @@
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  top: 200vh;
+}
+
+.no-mobile {
+  @media ($mobile) {
+    display: none;
+  }
+}
+
+.no-desktop {
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.desktop {
+  @media ($no-desktop) {
+    display: none;
+  }
+}
