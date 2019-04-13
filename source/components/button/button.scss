@@ -1,24 +1,26 @@
 .button {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
+  margin: 0 auto;
+  font-weight: 700;
   font-family: inherit;
-  vertical-align: top;
   text-align: center;
+  color: $color-accent-text;
+  text-decoration: none;
+  background-color: $color-accent-back;
   border: none;
-  outline: none;
-  cursor: pointer;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.3s;
-  transition-property: color, opacity, background-color, border-color, box-shadow;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
 
+  @include interactive;
+
+  &[href]:hover,
   &:not(:disabled):hover,
   &:focus {
-    opacity: 0.6;
+    background-color: $color-accent-back-hover;
   }
 
+  &[href]:active,
   &:not(:disabled):active {
-    opacity: 0.3;
+    color: rgba($color-accent-text, 0.3);
+    background-color: $color-accent-back-active;
   }
 }

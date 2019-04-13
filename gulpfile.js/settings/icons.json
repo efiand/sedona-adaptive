@@ -1,7 +1,7 @@
 {
   "src": [
     "source/img/icons/**/*.svg",
-    "source/components/**/*.icon.svg"
+    "source/**/*.icon.svg"
   ],
   "dest": {
     "icons": "tmp/icons",

@@ -1,11 +1,3 @@
-@mixin background-image ($pict, $ext) {
-  background-image: url("../img/#{$pict}.#{$ext}");
-
-  @media (#{$blink-detector}: 0) and (min-resolution: 0.001dpcm) {
-    background-image: url("../img/#{$pict}.webp");
-  }
-}
-
 @mixin font-face ($family, $weight, $style, $local, $url) {
   @font-face {
     font-style: $style;
@@ -13,6 +5,28 @@
     font-family: "#{$family}";
     font-display: swap;
     src: local("#{$local}"), url("../fonts/#{$url}.woff2") format("woff2"), url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@mixin interactive {
+  outline: none;
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-property: color, opacity, background-color, border-color, box-shadow;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transition-duration: 0.1s;
+  }
+}
+
+@mixin background-image ($pict, $ext) {
+  background-image: url("../img/#{$pict}.#{$ext}");
+
+  @media ($media-blink) {
+    background-image: url("../img/#{$pict}.webp");
   }
 }
 

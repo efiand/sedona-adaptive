@@ -1,0 +1,12 @@
+a {
+  color: inherit;
+  text-decoration-skip-ink: none;
+
+  @include interactive;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

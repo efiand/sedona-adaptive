@@ -1,0 +1,17 @@
+<ul class="socials page__list">
+  {% for item in layout.socials %}
+    <li class="socials__item {{ "socials__item--text-link" if not item.icon }}">
+      {% if item.icon %}
+        <a href="{{ item.href }}" class="socials__button button iconable iconable--{{ item.icon }}">
+          <span class="visually-hidden">
+            {{ item.text }}
+          </span>
+        </a>
+      {% else %}
+        <a href="{{ item.href }}" class="socials__text-link">
+          {{ item.text }}
+        </a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

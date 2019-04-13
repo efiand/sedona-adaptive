@@ -1,5 +1,5 @@
 {
-  "src": "source/img/**/*.{jpg,png,svg}",
+  "src": "source/img/*.{jpg,png,svg}",
   "dest": "build/img",
   "jpegoptim": {
     "max": 80,

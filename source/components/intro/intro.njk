@@ -1,0 +1,16 @@
+<section class="intro">
+  <img class="intro__img" src="{{ layout.introImg }}" alt="{{ layout.introAlt }}">
+
+  {% if layout.isIndex %}
+    <h1 class="visually-hidden">
+      {{ layout.siteName }}
+    </h1>
+  {% else %}
+    <h1 class="page__heading">
+      {{ layout.pageTitle }}
+    </h1>
+    <p class="page__description">
+      {{ layout.pageDescription }}
+    </p>
+  {% endif %}
+</section>

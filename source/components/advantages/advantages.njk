@@ -1,0 +1,39 @@
+<section class="advantages">
+  <h2 class="visually-hidden">
+    {{ params.heading }}
+  </h2>
+  <b class="page__heading">
+    {{ params.lead }}
+  </b>
+  <p class="advantages__description page__description">
+    {{ params.description }}
+  </p>
+
+  <ol class="advantages__list page__list">
+    {% for item in params.list %}
+      <li class="advantages__item {{ "advantages__item--with-img" if item.img }}">
+        <b class="advantages__item-heading page__heading">
+          {{ item.title }}
+        </b>
+        <p class="advantages__item-description">
+          {{ item.description }}
+        </p>
+
+        {% if item.img %}
+          {% set picture = {
+            mix: "advantages__picture",
+            mixImg: "advantages__img",
+            src: item.img,
+            alt: item.title
+          } %}
+          {% include "source/components/picture/picture.njk" %}
+        {% endif %}
+
+        {% if item.features %}
+          {% set features = item.features %}
+          {% include "source/components/features/features.njk" %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</section>

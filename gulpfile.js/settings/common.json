@@ -1,15 +1,15 @@
 {
-  "template": "source/components/page/page.njk",
+  "template": "source/components/_page/page.njk",
   "tasks": {
     "build": [
       "clean",
       "tmp",
+      "symbols",
       "css",
       "scripts",
       "html",
       "img",
       "icons",
-      "symbols",
       "webp",
       "static"
     ],
@@ -40,11 +40,11 @@
       ["img"]
     ],
     [
-      "source/img/icons/**/*.svg",
+      ["source/img/icons/**/*.svg", "source/**/*.icon.svg"],
       ["icons"]
     ],
     [
-      "source/img/symbols/**/*.svg",
+      ["source/img/symbols/**/*.svg", "source/**/*.symbol.svg"],
       ["symbols"]
     ],
     [

@@ -1,0 +1,22 @@
+.features {
+  padding: 7px 0 37px;
+  text-align: left;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.features__item {
+  padding: 28px 28px 0 70px;
+}
+
+.features__heading {
+  display: block;
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.features__description {
+  margin: 0;
+  color: $color-description;
+}

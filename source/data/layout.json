@@ -23,5 +23,32 @@
       "url": "https://htmlacademy.ru/intensive/adaptive",
       "text": "HTML Academy"
     }
-  ]
+  ],
+  "socials": [
+    {
+      "href": "#",
+      "text": "#visitsedona"
+    },
+    {
+      "href": "#",
+      "text": "Мы в Twitter",
+      "icon": "twitter"
+    },
+    {
+      "href": "#",
+      "text": "Мы в Facebook",
+      "icon": "facebook"
+    },
+    {
+      "href": "#",
+      "text": "Мы на Youtube",
+      "icon": "youtube"
+    }
+  ],
+  "developer": {
+    "label": "Разработано",
+    "name": "HTML Academy",
+    "logo": "developer",
+    "href": "https://htmlacademy.ru/intensive/adaptive"
+  }
 }

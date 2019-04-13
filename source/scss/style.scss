@@ -3,6 +3,6 @@
 @import "mixins";
 @import "fonts";
 @import "keyframes";
-@import "scaffolding";
+@import "global";
 //=require ../components/**/*.scss
-@import "overrides";
+@import "helpers";

@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials__item {
+  &--text-link {
+    width: 100%;
+    margin: 0 0 36px;
+    text-align: center;
+  }
+}
+
+.socials__text-link {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-decoration: none;
+}
+
+.socials__button {
+  width: 46px;
+  height: 48px;
+  margin: 0 3px 6px;
+}

@@ -1,11 +1,63 @@
 {
   "pageTitle": "Фото и видео",
+  "pageDescription": "Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.",
   "components": [
     {
-      "name": "intro",
+      "name": "photos",
       "params": {
-        "heading": "",
-        "text": ""
+        "texts": {
+          "author": "Автор фото:",
+          "like": "Поставить лайк"
+        },
+        "action": "https://echo.htmlacademy.ru",
+        "photos": [
+          {
+            "src": "img/photo-1.jpg",
+            "author": "Борис",
+            "likes": 1350
+          },
+          {
+            "src": "img/photo-2.jpg",
+            "author": "Сергей",
+            "likes": 143
+          },
+          {
+            "src": "img/photo-3.jpg",
+            "author": "Петр",
+            "likes": 96
+          },
+          {
+            "src": "img/photo-4.jpg",
+            "author": "Антон",
+            "likes": 254
+          }
+        ]
+      }
+    },
+    {
+      "name": "video",
+      "params": {
+        "heading": "Видео",
+        "lead": "Все еще сомневаетесь?",
+        "description": "Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!",
+        "src": "#",
+        "poster": "img/video.jpg",
+        "custom": true,
+        "controls": [
+          {
+            "alias": "replay",
+            "title": "Заново",
+            "gap": true
+          },
+          {
+            "alias": "subtitles",
+            "title": "Субтитры"
+          },
+          {
+            "alias": "fullscreen",
+            "title": "Полноэкранный режим"
+          }
+        ]
       }
     }
   ]

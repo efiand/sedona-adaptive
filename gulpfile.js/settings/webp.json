@@ -1,5 +1,5 @@
 {
-  "src": "source/img/**/*.{jpg,png}",
+  "src": "source/img/*.{jpg,png}",
   "options": {
     "quality": 82
   },

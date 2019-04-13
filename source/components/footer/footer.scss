@@ -1,0 +1,23 @@
+.footer {
+  padding: 36px 20px 0;
+}
+
+.footer__developer {
+  position: relative;
+  display: table;
+  margin: 35px auto;
+  padding: 5px 40px 0 0;
+}
+
+.footer__developer-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 27px;
+  height: 34px;
+}
+
+.footer__developer-logo {
+  width: inherit;
+  height: inherit;
+}

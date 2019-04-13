@@ -15,7 +15,7 @@ functions.html = () => {
         page: functions.returnPageName(filename),
         isDev: settings.isDev,
         minSuffix: settings.isDev ? `` : `.min`
-      }
+      };
     }))
     .pipe(plugins.nunjucksRender({
       manageEnv: (env) => {

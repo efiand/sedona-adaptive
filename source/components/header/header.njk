@@ -1,18 +1,19 @@
-<header class="header">
+<header class="header page__list">
   <button class="header-toggler hidden">
     <span class="visually-hidden">
-      {{ data.toggleMenuText }}
+      {{ layout.toggleMenuText }}
     </span>
   </button>
 
-  <nav>
-    <a class="header__logo" href="index.html">
-      <img src="{{ data.logoSrc }}" alt="{{ data.logoAlt }}">
+  <nav class="header__nav">
+    <a class="header__logo" {{ "href=\"index.html\"" if layout.isIndex }}>
+      <img src="{{ layout.logoSrc }}" alt="{{ layout.logoAlt }}">
     </a>
-    <ul class="header-nav">
-      {% for link in data.menu %}
-        <li>
-          <a class="header__link" href="{{ link.url }}">
+
+    <ul class="page__list">
+      {% for link in layout.menu %}
+        <li class="header__nav-item">
+          <a class="header__nav-link button" href="{{ link.url }}">
             {{ link.text }}
           </a>
         </li>
@@ -20,9 +21,5 @@
     </ul>
   </nav>
 
-  <img class="header__img" src="{{ data.introImg }}" alt="{{ data.introAlt }}">
-
-  <h1 class="{{ "visually-hidden" if data.isIndex else "header__heading" }}">
-    {{ data.siteName if data.isIndex else data.pageTitle }}
-  </h1>
+  {% include "source/components/intro/intro.njk" %}
 </header>
