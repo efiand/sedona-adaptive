@@ -21,8 +21,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 (function() {
-  // Плагины общего назначения
-  var functions = {}; // (Not found!)require ../../gulpfile.js/functions/**/*.both.js
   // Клиентские модули
   // Применение класса к набору DOM-элементов
   var applyClass = function applyClass(selector, Class) {
