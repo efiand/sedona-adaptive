@@ -248,6 +248,7 @@ img {
 
 .intro {
   position: relative;
+  padding: 429px 0 0;
   border-top: 55px solid transparent;
 }
 
@@ -276,9 +277,12 @@ img {
 }
 
 .intro__img {
-  position: relative;
+  position: absolute;
+  top: 90px;
+  left: 50%;
   width: 281px;
-  margin: 90px auto 125px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .map__poster {
