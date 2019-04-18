@@ -1,0 +1,53 @@
+.form {
+  margin: -11px 0 0;
+
+  legend {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+
+.form__fieldset {
+  padding: 18px 20px 6px;
+  border: none;
+  border-top: 1px solid $color-back-darker;
+}
+
+.form__fieldset--contacts {
+  padding-bottom: 16px;
+
+  .form__field {
+    position: relative;
+    flex-wrap: wrap;
+    margin: 0 0 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $color-back-darker;
+    }
+  }
+
+  label {
+    margin: 0 20px 7px;
+  }
+
+  input {
+    padding-right: 78px;
+  }
+}
+
+.form__field {
+  clear: both;
+  margin: 0 0 20px;
+}

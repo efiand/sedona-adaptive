@@ -1,0 +1,22 @@
+.field {
+  display: flex;
+  line-height: 26px;
+
+  label {
+    margin: 18px 12px 0 0;
+  }
+}
+
+.field__input {
+  width: 100%;
+  padding: 16px 20px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: $color-back;
+  border: none;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

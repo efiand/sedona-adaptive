@@ -39,18 +39,6 @@
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
     "selector-max-compound-selectors": 3,
-    "selector-max-type": [
-      0,
-      {
-        "ignoreTypes": [
-          "a",
-          "body",
-          "img",
-          "html",
-          "p"
-        ]
-      }
-    ],
     "selector-max-universal": 1,
     "selector-no-qualifying-type": [
       true,

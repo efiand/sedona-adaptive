@@ -1,6 +1,6 @@
 <form class="form" action="{{ params.action }}" method="post">
   {% for fieldset in params.fieldsets %}
-    <fieldset>
+    <fieldset class="form__fieldset{{ " form__fieldset--contacts" if fieldset.isContacts }}">
       <legend>
         {{ fieldset.legend }}
       </legend>

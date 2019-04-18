@@ -3,7 +3,6 @@
 }
 
 .visually-hidden {
-  position: absolute;
-  left: -10000px;
-  clip: rect(0, 0, 0, 0);
+  position: fixed;
+  top: 200vh;
 }

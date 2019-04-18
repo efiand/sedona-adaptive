@@ -35,6 +35,7 @@
           },
           {
             "legend": "Контактная информация:",
+            "isContacts": true,
             "fields": [
               {
                 "type": "tel",
