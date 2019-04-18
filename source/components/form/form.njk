@@ -1,0 +1,17 @@
+<form class="form" action="{{ params.action }}" method="post">
+  {% for fieldset in params.fieldsets %}
+    <fieldset>
+      <legend>
+        {{ fieldset.legend }}
+      </legend>
+
+      {% for field in fieldset.fields %}
+        {% if field.type === 'radio' or field.type === 'checkbox' %}
+          {% include "source/components/checker/checker.njk" %}
+        {% else %}
+          {% include "source/components/field/field.njk" %}
+        {% endif %}
+      {% endfor %}
+    </fieldset>
+  {% endfor %}
+</form>

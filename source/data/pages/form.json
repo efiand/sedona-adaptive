@@ -1,11 +1,119 @@
 {
   "pageTitle": "Оставьте свой отзыв",
+  "pageDescription": "Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях",
   "components": [
     {
-      "name": "intro",
+      "name": "form",
       "params": {
-        "heading": "",
-        "text": ""
+        "action": "https://echo.htmlacademy.ru",
+        "submitText": "Отправить отзыв",
+        "fieldsets": [
+          {
+            "legend": "Представьтесь:",
+            "fields": [
+              {
+                "type": "text",
+                "name": "name",
+                "label": "Имя*:",
+                "placeholder": "Петр",
+                "required": true
+              },
+              {
+                "type": "text",
+                "name": "surname",
+                "label": "Фамилия*:",
+                "placeholder": "Иванов",
+                "required": true
+              },
+              {
+                "type": "text",
+                "name": "patronymic",
+                "label": "Отчество:",
+                "placeholder": "Александрович"
+              }
+            ]
+          },
+          {
+            "legend": "Контактная информация:",
+            "fields": [
+              {
+                "type": "tel",
+                "name": "phone",
+                "label": "Контактный телефон*:",
+                "placeholder": "Введите телефон",
+                "required": true
+              },
+              {
+                "type": "email",
+                "name": "mail",
+                "label": "Электронная почта*:",
+                "placeholder": "Введите e-mail",
+                "required": true
+              }
+            ]
+          },
+          {
+            "legend": "Ваше общее впечатление:",
+            "fields": [
+              {
+                "type": "radio",
+                "name": "impression",
+                "label": "Скорее положительное"
+              },
+              {
+                "type": "radio",
+                "name": "impression",
+                "label": "Скорее отрицательное"
+              },
+              {
+                "type": "radio",
+                "name": "impression",
+                "label": "Затрудняюсь ответить",
+                "cheched": true
+              }
+            ]
+          },
+          {
+            "legend": "Посещенные достопримечательности:",
+            "fields": [
+              {
+                "type": "checkbox",
+                "name": "sights",
+                "label": "Мост Дьявола",
+                "checked": true
+              },
+              {
+                "type": "checkbox",
+                "name": "sights",
+                "label": "Гора-Колокол",
+                "checked": true
+              },
+              {
+                "type": "checkbox",
+                "name": "sights",
+                "label": "Слайд-парк",
+                "checked": true
+              },
+              {
+                "type": "checkbox",
+                "name": "sights",
+                "label": "Красные скалы"
+              }
+            ]
+          },
+          {
+            "legend": "Опишите свои эмоции:",
+            "fields": [
+              {
+                "type": "textarea",
+                "name": "message",
+                "label": "Комментарий",
+                "hideLabel": true,
+                "placeholder": "Опишите подробно все свои восторги "
+              }
+            ]
+          }
+        ]
       }
     }
   ]
