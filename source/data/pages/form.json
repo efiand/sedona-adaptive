@@ -35,7 +35,7 @@
           },
           {
             "legend": "Контактная информация:",
-            "isContacts": true,
+            "modifier": "contacts",
             "fields": [
               {
                 "type": "tel",
@@ -55,6 +55,7 @@
           },
           {
             "legend": "Ваше общее впечатление:",
+            "modifier": "impressions",
             "fields": [
               {
                 "type": "radio",

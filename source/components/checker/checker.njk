@@ -1,4 +1,4 @@
-<p class="form__checker checker">
+<p class="form__checker checker{{ " checker--radio" if field.type === "radio" }}">
   <input class="visually-hidden" id="{{ field.name }}" name="{{ field.name }}"
     type="{{ field.type }}"{{ " checked" if field.checked }}>
   <label for="{{ field.name }}">

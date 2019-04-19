@@ -1,0 +1,22 @@
+.checker {
+  clear: both;
+  margin: 0 0 9px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+
+  label {
+    position: relative;
+    display: block;
+    padding: 17px 0 17px 77px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-back;
+    }
+  }
+}

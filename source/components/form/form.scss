@@ -17,6 +17,10 @@
   padding: 18px 20px 6px;
   border: none;
   border-top: 1px solid $color-back-darker;
+
+  &--impressions {
+    padding-bottom: 17px;
+  }
 }
 
 .form__fieldset--contacts {
