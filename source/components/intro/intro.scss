@@ -1,7 +1,16 @@
 .intro {
   position: relative;
   padding: 197px 0 0;
-  border-top: 55px solid transparent;
+  border-top: 54px solid transparent;
+
+  @media ($tablet) {
+    padding: 365px 0 0;
+    border: none;
+  }
+
+  @media ($desktop) {
+    padding: 413px 0 0;
+  }
 
   &::before {
     content: "";
@@ -14,6 +23,18 @@
     background-image: url("../img/intro-back.jpg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
+
+    @include background-image(intro-back, jpg);
+
+    @media ($tablet) {
+      height: 290px;
+
+      @include background-image(intro-back-desktop, jpg);
+    }
+
+    @media ($desktop) {
+      height: 301px;
+    }
   }
 
   &::after {
@@ -25,6 +46,18 @@
     height: 26px;
     background-image: url("../img/intro-decor.svg");
     background-size: 100% 26px;
+
+    @media ($tablet) {
+      top: 233px;
+      height: 57px;
+      background-image: url("../img/intro-decor-tablet.svg");
+      background-size: 100% 57px;
+    }
+
+    @media ($desktop) {
+      top: 244px;
+      background-image: url("../img/intro-decor-desktop.svg");
+    }
   }
 
   &--index {
@@ -53,4 +86,13 @@
   left: 50%;
   width: 230px;
   transform: translateX(-50%);
+
+  @media ($tablet) {
+    top: 94px;
+    width: 460px;
+  }
+
+  @media ($desktop) {
+    top: 102px;
+  }
 }

@@ -6,6 +6,7 @@
   font-family: inherit;
   text-align: center;
   color: $color-accent-text;
+  text-transform: uppercase;
   text-decoration: none;
   background-color: $color-accent-back;
   border: none;
@@ -22,5 +23,9 @@
   &:not(:disabled):active {
     color: rgba($color-accent-text, 0.3);
     background-color: $color-accent-back-active;
+  }
+
+  &:disabled {
+    background-color: $color-back-disabled;
   }
 }

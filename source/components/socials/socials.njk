@@ -2,7 +2,7 @@
   {% for item in layout.socials %}
     <li class="socials__item {{ "socials__item--text-link" if not item.icon }}">
       {% if item.icon %}
-        <a href="{{ item.href }}" class="socials__button button iconable iconable--{{ item.icon }}">
+        <a href="{{ item.href }}" class="socials__button socials__button--{{ item.icon }} button iconable">
           <span class="visually-hidden">
             {{ item.text }}
           </span>

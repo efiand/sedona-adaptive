@@ -1,57 +1,276 @@
 .form {
   margin: -11px 0 0;
 
-  legend {
-    float: left;
+  @media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  @media ($desktop) {
+    padding: 0 120px;
+  }
+}
+
+.form__group {
+  padding: 18px 20px 6px;
+  border: none;
+  border-top: 1px solid $color-back-darker;
+
+  @media ($tablet) {
+    box-sizing: border-box;
     width: 100%;
+    margin: 63px 0 0;
+  }
+
+  legend {
     margin: 0 0 20px;
     padding: 0;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
     text-align: center;
-  }
-}
+    background-color: #ffffff;
 
-.form__fieldset {
-  padding: 18px 20px 6px;
-  border: none;
-  border-top: 1px solid $color-back-darker;
+    @media ($tablet) {
+      position: relative;
+      top: -31px;
+      display: table;
+      width: 300px;
+      margin: 0 auto;
+      padding: 0 50px;
+      font-size: 21px;
+    }
+  }
+
+  &--name {
+    @media ($tablet) {
+      width: 50%;
+      margin: 0;
+      padding: 18px 0 0 58px;
+      border-top: none;
+
+      legend {
+        position: static;
+        margin: 0 0 56px;
+        padding: 0;
+        text-align: left;
+      }
+    }
+
+    @media ($desktop) {
+      padding: 3px 0 0 80px;
+    }
+  }
 
   &--impressions {
     padding-bottom: 17px;
+
+    @media ($tablet) {
+      position: relative;
+      order: -1;
+      width: 50%;
+      margin: 0;
+      padding: 18px 50px 0 0;
+      border-top: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        right: 0;
+        bottom: 19px;
+        width: 1px;
+        background-color: #e2e2e2;
+      }
+
+      legend {
+        position: static;
+        margin: 0 0 56px;
+        padding: 0;
+        text-align: left;
+      }
+
+      .form__checker {
+        margin: 0 0 18px;
+      }
+    }
+
+    @media ($desktop) {
+      padding: 3px 50px 0 4px;
+
+      &::after {
+        top: 8px;
+      }
+
+      legend {
+        margin: 0 75px 56px;
+      }
+    }
+  }
+
+  &--sights {
+    @media ($tablet) {
+      margin: 55px 0 -23px;
+
+      legend {
+        top: -44px;
+      }
+
+      .form__group-inner {
+        display: flex;
+        flex-wrap: wrap;
+        width: 520px;
+        margin: 0 auto;
+      }
+
+      .form__checker {
+        width: 50%;
+        margin: 0;
+      }
+
+      label {
+        margin: 1px 0 16px 31px;
+      }
+    }
+
+    @media ($desktop) {
+      padding: 18px 0 0;
+
+      .form__group-inner {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .form__checker {
+        width: auto;
+      }
+
+      label {
+        margin: 1px 5px 20px 0;
+      }
+    }
+  }
+
+  &--message {
+    @media ($tablet) {
+      padding: 44px 0 0;
+    }
+
+    legend {
+      margin-bottom: 17px;
+
+      @media ($tablet) {
+        top: -57px;
+      }
+    }
+
+    .form__field {
+      @media ($tablet) {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
 
-.form__fieldset--contacts {
+.form__group--contacts {
   padding-bottom: 16px;
+
+  @media ($tablet) {
+    padding: 11px 0 0;
+  }
+
+  .form__group-inner {
+    @media ($desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+  }
 
   .form__field {
     position: relative;
     flex-wrap: wrap;
     margin: 0 0 12px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 58px;
-      height: 58px;
-      background-color: $color-back-darker;
+    @media ($tablet) {
+      margin: 0 0 23px;
+    }
+
+    @media ($desktop) {
+      display: flex;
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+    }
+  }
+
+  legend {
+    @media ($tablet) {
+      top: -24px;
     }
   }
 
   label {
     margin: 0 20px 7px;
+
+    @media ($desktop) {
+      margin: 17px 16px 7px 0;
+    }
   }
 
   input {
     padding-right: 78px;
+
+    @media ($desktop) {
+      width: 213px;
+    }
   }
 }
 
 .form__field {
-  clear: both;
   margin: 0 0 20px;
+}
+
+.form__submit-wrapper {
+  margin: 25px auto 37px;
+
+  @media ($tablet) {
+    display: flex;
+    width: 100%;
+    margin: 25px 0 0;
+  }
+}
+
+.form__submit {
+  width: 280px;
+  padding: 16px 48px;
+  font-size: 21px;
+  line-height: 26px;
+
+  @media ($tablet) {
+    width: 324px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  @media ($desktop) {
+    width: 480px;
+  }
+}
+
+.form__submit-alert {
+  max-width: 300px;
+  margin: 21px 0 0;
+
+  @media ($mobile) {
+    display: none;
+  }
 }

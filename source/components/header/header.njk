@@ -7,13 +7,17 @@
 
   <nav class="header__nav">
     <a class="header__logo" {{ "href=\"index.html\"" if layout.isIndex }}>
-      <img src="{{ layout.logoSrc }}" alt="{{ layout.logoAlt }}">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="{{ layout.logoSrcDesktop }}">
+        <img src="{{ layout.logoSrc }}" alt="{{ layout.logoAlt }}">
+      </picture>
     </a>
 
-    <ul class="page__list">
+    <ul class="header__nav-list page__list">
       {% for link in layout.menu %}
         <li class="header__nav-item">
-          <a class="header__nav-link button" href="{{ link.url }}">
+          <a class="header__nav-link button
+            {{ "header__nav-link--active" if link.url === page + ".html" }}" href="{{ link.url }}">
             {{ link.text }}
           </a>
         </li>

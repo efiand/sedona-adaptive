@@ -1,17 +1,31 @@
 <form class="form" action="{{ params.action }}" method="post">
   {% for fieldset in params.fieldsets %}
-    <fieldset class="form__fieldset{{ " form__fieldset--" + fieldset.modifier if fieldset.modifier }}">
-      <legend>
-        {{ fieldset.legend }}
-      </legend>
+    <div class="form__group{{ " form__group--" + fieldset.modifier if fieldset.modifier }}">
+      <fieldset>
+        <legend>
+          {{ fieldset.legend }}
+        </legend>
 
-      {% for field in fieldset.fields %}
-        {% if field.type === 'radio' or field.type === 'checkbox' %}
-          {% include "source/components/checker/checker.njk" %}
-        {% else %}
-          {% include "source/components/field/field.njk" %}
-        {% endif %}
-      {% endfor %}
-    </fieldset>
+        {{ "<div class=\"form__group-inner\">" if fieldset.hasInner }}
+          {% for field in fieldset.fields %}
+            {% if field.type === 'radio' or field.type === 'checkbox' %}
+              {% include "source/components/checker/checker.njk" %}
+            {% else %}
+              {% include "source/components/field/field.njk" %}
+            {% endif %}
+          {% endfor %}
+        {{ "</div>" if fieldset.hasInner }}
+      </fieldset>
+    </div>
   {% endfor %}
+
+  <div class="form__submit-wrapper">
+    <button class="form__submit button" type="submit">
+      {{ params.submitText }}
+    </button>
+
+    <p class="form__submit-alert">
+      {{ params.submitAlert }}
+    </p>
+  </div>
 </form>

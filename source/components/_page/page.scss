@@ -1,15 +1,31 @@
 .page {
+  overflow-x: hidden;
   font-size: 14px;
   line-height: 1.5;
   font-family: "PT Sans", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   text-transform: uppercase;
+
+  @media ($desktop) {
+    background-color: $color-back;
+  }
 }
 
 .page__body {
   min-width: 320px;
   margin: 0;
+
+  @media ($desktop) {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
+
+.page__main {
+  display: block;
 }
 
 .page__list {
@@ -25,6 +41,11 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+
+  @media ($tablet) {
+    margin: 0 24px 30px;
+    font-size: 30px;
+  }
 }
 
 .page__description {
@@ -32,4 +53,9 @@
   line-height: 24px;
   text-align: center;
   color: $color-description;
+
+  @media ($tablet) {
+    width: 440px;
+    margin: 0 auto 67px;
+  }
 }

@@ -3,7 +3,7 @@
   {% set attrs = attrs + " required" %}
 {% endif %}
 
-<p class="field form__field">
+<p class="field form__field {{ " iconable iconable--" + field.name if field.hasIcon }}">
   <label{{ " class=\"visually-hidden\"" if field.hideLabel }} for="{{ field.name }}">
     {{ field.label }}
   </label>

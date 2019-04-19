@@ -6,3 +6,21 @@
   position: fixed;
   top: 200vh;
 }
+
+.no-desktop {
+  @media ($desktop) {
+    display: none;
+  }
+}
+
+.iconable {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons.svg");
+    background-repeat: no-repeat;
+    background-size: 96.17px 498px;
+  }
+}

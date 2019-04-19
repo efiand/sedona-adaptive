@@ -16,16 +16,12 @@
   transition-property: color, opacity, background-color, border-color, box-shadow;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-
-  &:active {
-    transition-duration: 0.1s;
-  }
 }
 
 @mixin background-image ($pict, $ext) {
   background-image: url("../img/#{$pict}.#{$ext}");
 
-  @media ($media-blink) {
+  @media ($blink) {
     background-image: url("../img/#{$pict}.webp");
   }
 }
