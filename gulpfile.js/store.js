@@ -8,7 +8,7 @@ const src = {
   webp: `data/img/**/*.{jpg,png}`,
   icons: `assets/icons/**/*.svg`,
   symbols: `assets/symbols/**/*.svg`,
-  static: `static/**/*`,
+  static: [`static/**/*`, `static/**/.*`],
   staticText: `static/**/*.{html,css,txt,md,svg,js,json,php,xml}`,
   gulpfile: `gulpfile.js/**/*.js`,
   markdown: [`**/*.md`, `!node_modules/**/*.md`]

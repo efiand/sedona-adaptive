@@ -7,7 +7,7 @@
     "test": "htmlhint --config .nunjuckshintrc **/*.njk && gulp test",
     "test:build": "htmlhint build/**/*.html && gulp validate:html",
     "start": "npm test && gulp dev",
-    "build": "npm test && cross-env NODE_ENV=production gulp build && test:build",
+    "build": "npm test && cross-env NODE_ENV=production gulp build && npm run test:build",
     "deploy": "gh-pages -d build",
     "push": "git add . && git commit -m \"edit\" && git push"
   },

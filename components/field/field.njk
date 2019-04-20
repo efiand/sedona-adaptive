@@ -1,4 +1,5 @@
-{% set attrs = "name=\"" + field.name + "\"" + " placeholder=\"" + field.placeholder + "\"" %}
+{% set attrs = "name=\"" + field.name + "\"" + "id=\"" + field.name + "\""
+  + " placeholder=\"" + field.placeholder + "\"" %}
 {% if field.required %}
   {% set attrs = attrs + " required" %}
 {% endif %}
@@ -8,7 +9,7 @@
     {{ field.label }}
   </label>
   {% if field.type === "textarea" %}
-    <textarea class="field__input" id="{{ field.name }}" {{ attrs }}></textarea>
+    <textarea class="field__input" {{ attrs }}></textarea>
   {% else %}
     <input class="field__input" type="{{ field.type }}" {{ attrs }}>
   {% endif %}
