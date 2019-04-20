@@ -252,6 +252,7 @@ img {
   width: 30px;
   height: 17px;
   background-color: transparent;
+  background-image: url("../img/icons.svg");
   background-position: -10px -288px;
 }
 
@@ -272,10 +273,14 @@ img {
 }
 
 .features__item {
+  position: relative;
   padding: 28px 28px 0 70px;
 }
 
 .features__item::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons.svg");
   background-size: auto 250px;
 }
 
@@ -333,12 +338,13 @@ img {
   resize: none;
 }
 
-.field.iconable::before {
-  position: absolute;
-  z-index: 1;
+.field--phone,
+.field--mail {
+  position: relative;
 }
 
-.field.iconable::after {
+.field--phone::before,
+.field--mail::before {
   content: "";
   position: absolute;
   right: 0;
@@ -348,7 +354,14 @@ img {
   background-color: #e6e6e6;
 }
 
-.field.iconable--phone::before {
+.field--phone::after,
+.field--mail::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons.svg");
+}
+
+.field--phone::after {
   right: 19px;
   bottom: 20px;
   width: 18px;
@@ -356,7 +369,7 @@ img {
   background-position: -10px -361px;
 }
 
-.field.iconable--mail::before {
+.field--mail::after {
   right: 21px;
   bottom: 21px;
   width: 16px;
@@ -678,14 +691,18 @@ img {
 }
 
 .socials__button {
+  position: relative;
   width: 46px;
   height: 48px;
   margin: 0 3px 6px;
 }
 
 .socials__button::before {
+  content: "";
+  position: absolute;
   top: 50%;
   left: 50%;
+  background-image: url("../img/icons.svg");
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: inherit;
@@ -721,17 +738,6 @@ img {
 .visually-hidden {
   position: fixed;
   top: 200vh;
-}
-
-.iconable {
-  position: relative;
-}
-
-.iconable::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icons.svg");
-  background-repeat: no-repeat;
 }
 
 @font-face {
