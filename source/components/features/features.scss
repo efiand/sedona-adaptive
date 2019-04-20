@@ -7,6 +7,34 @@
 
 .features__item {
   padding: 28px 28px 0 70px;
+
+  &::before {
+    background-size: auto 250px;
+  }
+
+  &--house::before {
+    top: 20px;
+    left: 22px;
+    width: 37px;
+    height: 37px;
+    background-position: -5px -6px;
+  }
+
+  &--gifts::before {
+    top: 17px;
+    left: 25px;
+    width: 32px;
+    height: 38px;
+    background-position: -5px -52px;
+  }
+
+  &--eat::before {
+    top: 23px;
+    left: 19px;
+    width: 40px;
+    height: 35px;
+    background-position: -5px -100px;
+  }
 }
 
 .features__heading {
