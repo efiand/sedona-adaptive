@@ -71,8 +71,20 @@ img {
 }
 
 .advantages__list {
+  position: relative;
   border-top: 16px solid #81b3d2;
   counter-reset: index;
+}
+
+.advantages__list::before {
+  content: "";
+  position: absolute;
+  top: -37px;
+  left: 0;
+  width: 100%;
+  height: 37px;
+  background-image: url("../img/advantages-decor.svg");
+  background-size: 100% 37px;
 }
 
 .advantages__item {
@@ -261,6 +273,34 @@ img {
 
 .features__item {
   padding: 28px 28px 0 70px;
+}
+
+.features__item::before {
+  background-size: auto 250px;
+}
+
+.features__item--house::before {
+  top: 20px;
+  left: 22px;
+  width: 37px;
+  height: 37px;
+  background-position: -5px -6px;
+}
+
+.features__item--gifts::before {
+  top: 17px;
+  left: 25px;
+  width: 32px;
+  height: 38px;
+  background-position: -5px -52px;
+}
+
+.features__item--eat::before {
+  top: 23px;
+  left: 19px;
+  width: 40px;
+  height: 35px;
+  background-position: -5px -100px;
 }
 
 .features__heading {
@@ -657,15 +697,15 @@ img {
 }
 
 .socials__button--twitter::before {
-  width: 9px;
-  height: 19px;
-  background-position: -10px -399px;
-}
-
-.socials__button--facebook::before {
   width: 18px;
   height: 15px;
   background-position: -10px -438px;
+}
+
+.socials__button--facebook::before {
+  width: 9px;
+  height: 19px;
+  background-position: -10px -399px;
 }
 
 .socials__button--youtube::before {
@@ -692,7 +732,6 @@ img {
   position: absolute;
   background-image: url("../img/icons.svg");
   background-repeat: no-repeat;
-  background-size: 96.17px 498px;
 }
 
 @font-face {
@@ -726,6 +765,10 @@ img {
   .page__description {
     width: 440px;
     margin: 0 auto 67px;
+  }
+
+  .advantages__list::before {
+    content: none;
   }
 
   .footer {
