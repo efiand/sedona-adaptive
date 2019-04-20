@@ -2,11 +2,15 @@
 // Подключение хранилища
 const { plugins, settings } = require(`./store`);
 
-// Добавление функций в хранилище
-plugins.requireDir(`functions`);
+// Добавление фильтров шаблонизатора в хранилище
+plugins.requireDir(`filters`);
 
-// Добавление настроек в хранилище
-settings.tasks = plugins.requireDir(`settings`);
-
-// Добавление задач к gulp, находящемуся в хранилище
+// Добавление одиночных задач к gulp, находящемуся в хранилище
 plugins.requireDir(`tasks`);
+
+// Серийные задачи
+Object.keys(settings.series).forEach((seria) => {
+  gulp.task(seria, (callback) => {
+    return gulp.series(...settings.series[seria])(callback);
+  });
+});

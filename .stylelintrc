@@ -1,9 +1,7 @@
 {
   "extends": "stylelint-config-htmlacademy",
   "plugins": [
-    "stylelint-declaration-block-no-ignored-properties",
-    "stylelint-order",
-    "stylelint-scss"
+    "stylelint-order"
   ],
   "rules": {
     "at-rule-no-unknown": [
@@ -11,10 +9,7 @@
       {
         "ignoreAtRules": [
           "mixin",
-          "define-mixin",
           "include",
-          "content",
-          "rules",
           "for",
           "function",
           "if",
@@ -23,41 +18,6 @@
         ]
       }
     ],
-    "color-named": "never",
-    "declaration-block-single-line-max-declarations": 1,
-    "declaration-colon-newline-after": "always-multi-line",
-    "declaration-property-value-blacklist": {
-      "cursor": [
-        "hand"
-      ]
-    },
-    "font-weight-notation": "numeric",
-    "max-nesting-depth": 3,
-    "plugin/declaration-block-no-ignored-properties": true,
-    "scss/dollar-variable-colon-space-after": "always",
-    "selector-list-comma-newline-before": "never-multi-line",
-    "selector-list-comma-space-after": "always-single-line",
-    "selector-list-comma-space-before": "never",
-    "selector-max-compound-selectors": 3,
-    "selector-max-universal": 1,
-    "selector-no-qualifying-type": [
-      true,
-      {
-        "ignore": [
-          "attribute"
-        ]
-      }
-    ],
-    "selector-pseudo-class-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": [
-          "/fill/"
-        ]
-      }
-    ],
-    "shorthand-property-no-redundant-values": true,
-    "value-no-vendor-prefix": true,
     "order/properties-order": [
       {
         "properties": [

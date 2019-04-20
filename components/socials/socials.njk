@@ -1,0 +1,11 @@
+<ul class="socials page__list">
+  {% for item in layout.socials %}
+    <li class="socials__item">
+      <a href="{{ item.href }}" class="socials__button socials__button--{{ item.icon }} button">
+        <span class="visually-hidden">
+          {{ item.text }}
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

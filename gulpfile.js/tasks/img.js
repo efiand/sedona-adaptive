@@ -1,14 +1,16 @@
 'use strict';
 
 const { gulp, plugins, settings } = require(`../store`);
-const { img, svgo } = settings.tasks;
 
 gulp.task(`img`, () => {
-  return gulp.src(img.src)
+  return gulp.src(settings.src.img)
     .pipe(plugins.imagemin([
-      plugins.imagemin.svgo(svgo),
+      plugins.imagemin.svgo(settings.svgo),
       plugins.imagemin.optipng(),
-      require(`imagemin-jpegoptim`)(img.jpegoptim)
+      require(`imagemin-jpegoptim`)({
+        max: 80,
+        progressive: true
+      })
     ]))
-    .pipe(gulp.dest(img.dest));
+    .pipe(gulp.dest(`build/img`));
 });

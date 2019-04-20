@@ -2,12 +2,11 @@
 // Создание символьного векторного спрайта
 
 const { gulp, plugins, settings } = require(`../store`);
-const { symbols, svgo } = settings.tasks;
 
 gulp.task(`symbols`, () => {
-  return gulp.src(symbols.src)
-    .pipe(plugins.imagemin([plugins.imagemin.svgo(svgo)]))
-    .pipe(plugins.svgstore(symbols.options))
-    .pipe(plugins.rename(symbols.filename))
-    .pipe(gulp.dest(symbols.dest));
+  return gulp.src(settings.src.symbols)
+    .pipe(plugins.imagemin([plugins.imagemin.svgo(settings.svgo)]))
+    .pipe(plugins.svgstore({ inlineSvg: true }))
+    .pipe(plugins.rename(`symbols.svg`))
+    .pipe(gulp.dest(`build/img`));
 });

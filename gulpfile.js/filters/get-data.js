@@ -4,9 +4,13 @@
 
 const { filters, plugins } = require(`../store`);
 
+filters.getJson = (json) => {
+  return JSON.parse(plugins.fs.readFileSync(json));
+};
+
 filters.getData = (page) => {
   return {
-    ...JSON.parse(plugins.fs.readFileSync(`source/data/layout.json`)),
-    ...JSON.parse(plugins.fs.readFileSync(`source/data/pages/${page}.json`))
+    ...filters.getJson(`data/layout.json`),
+    ...filters.getJson(`data/pages/${page}.json`)
   };
 };

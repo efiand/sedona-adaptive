@@ -1,8 +1,8 @@
 'use strict';
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins } = require(`../store`);
 
-// Очистка каталога билда перед сборкой
+// Удаление предыдущей сборки
 gulp.task(`clean`, () => {
-  return plugins.del(settings.tasks.del.src);
+  return plugins.del([`build`, `tmp`]);
 });

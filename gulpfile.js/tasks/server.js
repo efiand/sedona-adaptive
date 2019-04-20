@@ -1,15 +1,15 @@
 'use strict';
-// Запуск сервера browsersync
+// Запуск сервера browsersync и слежения за изменениями исходников
 
 const { gulp, plugins, settings } = require(`../store`);
-const { common } = settings.tasks;
 
 gulp.task(`server`, () => {
-  plugins.server.init(common.server);
+  plugins.server.init({ server: `build` });
 
-  // Система слежения, полностью настраиваемая в /source/data/server.json
-  common.watchers.forEach((watcher) => {
-    gulp.watch(watcher[0], gulp.series(...watcher[1], `server:reload`));
+  Object.keys(settings.watchers).forEach((watcher) => {
+    const tasks = settings.watchers[watcher] || [watcher];
+
+    gulp.watch(settings.src[watcher], gulp.series(...tasks, `server:reload`));
   });
 });
 
