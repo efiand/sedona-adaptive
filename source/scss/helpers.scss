@@ -12,14 +12,3 @@
     display: none;
   }
 }
-
-.iconable {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icons.svg");
-    background-repeat: no-repeat;
-  }
-}

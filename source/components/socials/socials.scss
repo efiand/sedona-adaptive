@@ -32,13 +32,17 @@
 }
 
 .socials__button {
+  position: relative;
   width: 46px;
   height: 48px;
   margin: 0 3px 6px;
 
   &::before {
+    content: "";
+    position: absolute;
     top: 50%;
     left: 50%;
+    background-image: url("../img/icons.svg");
     transform: translate(-50%, -50%);
     transition: inherit;
   }

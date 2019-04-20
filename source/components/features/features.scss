@@ -6,9 +6,13 @@
 }
 
 .features__item {
+  position: relative;
   padding: 28px 28px 0 70px;
 
   &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons.svg");
     background-size: auto 250px;
   }
 

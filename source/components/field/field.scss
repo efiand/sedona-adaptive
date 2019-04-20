@@ -13,13 +13,11 @@
     resize: none;
   }
 
-  &.iconable {
-    &::before {
-      position: absolute;
-      z-index: 1;
-    }
+  &--phone,
+  &--mail {
+    position: relative;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       right: 0;
@@ -29,21 +27,27 @@
       background-color: $color-back-darker;
     }
 
-    &--phone::before {
-      right: 19px;
-      bottom: 20px;
-      width: 18px;
-      height: 18px;
-      background-position: -10px -361px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icons.svg");
     }
+  }
 
-    &--mail::before {
-      right: 21px;
-      bottom: 21px;
-      width: 16px;
-      height: 16px;
-      background-position: -10px -325px;
-    }
+  &--phone::after {
+    right: 19px;
+    bottom: 20px;
+    width: 18px;
+    height: 18px;
+    background-position: -10px -361px;
+  }
+
+  &--mail::after {
+    right: 21px;
+    bottom: 21px;
+    width: 16px;
+    height: 16px;
+    background-position: -10px -325px;
   }
 }
 
