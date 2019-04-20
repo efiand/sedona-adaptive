@@ -3,7 +3,7 @@
 
 const { gulp, plugins, settings } = require(`../store`);
 
-gulp.task(`markdown:lint`, () => {
+gulp.task(`test:markdown`, () => {
   return gulp.src(settings.src.markdown)
     .pipe(plugins.remarkLintDko({
       rules: {

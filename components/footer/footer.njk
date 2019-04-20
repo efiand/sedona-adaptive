@@ -4,14 +4,14 @@
   </a>
 
   {% set mix = "footer__socials" %}
-  {% include "source/components/socials/socials.njk" %}
+  {% include "components/socials/socials.njk" %}
 
   <p class="footer__developer">
     {{ layout.developer.label }}
 
     <a class="footer__developer-link" href="{{ layout.developer.href }}">
       <svg class="footer__developer-logo" aria-label="{{ layout.developer.name }}">
-        <use xlink:href="#{{ layout.developer.logo }}"/>
+        <use xlink:href="{{ layout.developer.logo }}"/>
       </svg>
     </a>
   </p>

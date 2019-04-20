@@ -21,12 +21,13 @@ module.exports = {
       build: [
         `clean`,
         `tmp`,
-        `symbols`,
         `css`,
         `script`,
         `html`,
         `img`,
+        `webp`,
         `icons`,
+        `symbols`,
         `static`
       ],
       dev: [

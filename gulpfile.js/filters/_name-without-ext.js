@@ -1,10 +1,8 @@
 'use strict';
 // Возвращает имя файла без расширения
 
-const { functions, filters } = require(`../store`);
+const { filters } = require(`../store`);
 
-functions.nameWithoutExt = (string) => {
+filters.nameWithoutExt = (string) => {
   return string.slice(0, string.lastIndexOf(`.`));
 };
-
-filters.withoutExt = functions.nameWithoutExt;

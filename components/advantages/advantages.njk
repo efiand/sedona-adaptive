@@ -22,14 +22,15 @@
             </p>
           </div>
 
-          <picture class="advantages__picture">
-            <source type="image/webp" srcset="{{ item.img | withoutExt }}.webp"/>
+          <picture class="advantages__picture
+            {{ "advantages__picture--even" if loop.index % 2 === 0 }}">
+            <source type="image/webp" srcset="{{ item.img | nameWithoutExt }}.webp"/>
             <img class="advantages__img" src="{{ item.img }}" alt="{{ item.title }}">
           </picture>
 
           {% if item.features %}
             {% set features = item.features %}
-            {% include "source/components/features/features.njk" %}
+            {% include "components/features/features.njk" %}
           {% endif %}
         </li>
 

@@ -1,9 +1,6 @@
 <div class="map">
-  {% set picture = {
-    mix: "map__poster",
-    mixImg: "map__img",
-    src: params.poster.src,
-    alt: params.poster.alt
-  } %}
-  {% include "source/components/picture/picture.njk" %}
+  <picture class="map__poster">
+    <source type="image/webp" srcset="{{ params.poster.src | nameWithoutExt }}.webp"/>
+    <img class="map__poster-img" src="{{ params.poster.src }}" alt="{{ params.poster.alt }}">
+  </picture>
 </div>

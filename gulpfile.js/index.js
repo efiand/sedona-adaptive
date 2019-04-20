@@ -1,6 +1,6 @@
 'use strict';
 // Подключение хранилища
-const { plugins, settings } = require(`./store`);
+const { gulp, plugins, settings } = require(`./store`);
 
 // Добавление фильтров шаблонизатора в хранилище
 plugins.requireDir(`filters`);

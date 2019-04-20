@@ -13,19 +13,19 @@
 
   @include interactive;
 
-  &[href]:hover,
-  &:not(:disabled):hover,
+  &:hover,
   &:focus {
     background-color: $color-accent-back-hover;
   }
 
-  &[href]:active,
-  &:not(:disabled):active {
+  &:active {
     color: rgba($color-accent-text, 0.3);
     background-color: $color-accent-back-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
     background-color: $color-back-disabled;
   }
 }

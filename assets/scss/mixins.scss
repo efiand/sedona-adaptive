@@ -21,7 +21,7 @@
 @mixin background-image ($pict, $ext) {
   background-image: url("../img/#{$pict}.#{$ext}");
 
-  @media ($blink) {
+  @media ($webp) {
     background-image: url("../img/#{$pict}.webp");
   }
 }

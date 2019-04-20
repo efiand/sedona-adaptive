@@ -9,25 +9,25 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <title>{{ layout.siteName }}{{ layout.titleDelimiter }}{{ layout.pageTitle }}</title>
-  <link rel="stylesheet" href="css/style{{ minSuffix }}.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <div class="hidden">
-    {% include "tmp/symbols.svg" %}
+    {# {% include "tmp/symbols.svg" %} #}
   </div>
 
-  {% include "source/components/header/header.njk" %}
+  {% include "components/header/header.njk" %}
 
   <main class="page__main">
     {% for component in layout.components %}
       {% set params = component.params %}
-      {% include "source/components/" + component.name + "/" + component.name + ".njk" %}
+      {% include "components/" + component.name + "/" + component.name + ".njk" %}
     {% endfor %}
   </main>
 
-  {% include "source/components/footer/footer.njk" %}
+  {% include "components/footer/footer.njk" %}
 
-  <script src="js/scripts{{ minSuffix }}.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

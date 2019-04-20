@@ -16,7 +16,7 @@ gulp.task(`html`, () => {
     .pipe(plugins.nunjucksRender({
       manageEnv: (env) => {
         env.opts.autoescape = false;
-        env.addGlobal(`template`, `components/_page/page.scss`);
+        env.addGlobal(`template`, `components/_page/page.njk`);
 
         Object.keys(filters).forEach((filter) => {
           env.addFilter(filter, filters[filter]);

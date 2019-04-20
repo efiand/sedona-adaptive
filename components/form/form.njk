@@ -9,9 +9,9 @@
         {{ "<div class=\"form__group-inner\">" if fieldset.hasInner }}
           {% for field in fieldset.fields %}
             {% if field.type === 'radio' or field.type === 'checkbox' %}
-              {% include "source/components/checker/checker.njk" %}
+              {% include "components/checker/checker.njk" %}
             {% else %}
-              {% include "source/components/field/field.njk" %}
+              {% include "components/field/field.njk" %}
             {% endif %}
           {% endfor %}
         {{ "</div>" if fieldset.hasInner }}

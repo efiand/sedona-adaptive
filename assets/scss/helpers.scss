@@ -7,6 +7,12 @@
   top: 200vh;
 }
 
+.no-mobile {
+  @media ($mobile) {
+    display: none;
+  }
+}
+
 .no-desktop {
   @media ($desktop) {
     display: none;

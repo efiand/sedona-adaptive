@@ -4,33 +4,6 @@
   justify-content: center;
 }
 
-.socials__item {
-  &--text-link {
-    margin: 0 0 36px;
-
-    @media ($mobile) {
-      width: 100%;
-      text-align: center;
-    }
-
-    @media ($tablet) {
-      width: 225px;
-      margin: 10px 20px 0 0;
-    }
-
-    @media ($desktop) {
-      width: 382px;
-    }
-  }
-}
-
-.socials__text-link {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-decoration: none;
-}
-
 .socials__button {
   position: relative;
   width: 46px;

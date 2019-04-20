@@ -16,8 +16,11 @@
     <ul class="header__nav-list page__list">
       {% for link in layout.menu %}
         <li class="header__nav-item">
-          <a class="header__nav-link button
-            {{ "header__nav-link--active" if link.url === page + ".html" }}" href="{{ link.url }}">
+          <a class="button header__nav-link
+            {{ "header__nav-link--active" if link.url === page + ".html" }}
+            {{ "header__nav-link--first" if loop.index === 1 }}
+            {{ "header__nav-link--last" if loop.index === loop.length }}"
+            href="{{ link.url }}">
             {{ link.text }}
           </a>
         </li>
@@ -25,5 +28,5 @@
     </ul>
   </nav>
 
-  {% include "source/components/intro/intro.njk" %}
+  {% include "components/intro/intro.njk" %}
 </header>

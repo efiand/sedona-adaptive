@@ -49,7 +49,7 @@
   "developer": {
     "label": "Разработано",
     "name": "HTML Academy",
-    "logo": "developer",
+    "logo": "img/symbols.svg#developer",
     "href": "https://htmlacademy.ru/intensive/adaptive"
   }
 }

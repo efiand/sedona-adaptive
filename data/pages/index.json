@@ -14,26 +14,29 @@
             "title": "Настоящий городок",
             "description": "Седона не аттракцион для туристов, там течет своя жизнь",
             "img": "img/reason-1.jpg",
-            "features": [
-              {
-                "heading": "Жилье",
-                "description": "Рекомендуем пожить в настоящем мотеле, все как в кино!",
-                "icon": "house"
-              },
-              {
-                "heading": "Сувениры",
-                "description": "Не только китайского, но и местного производства!",
-                "icon": "gifts"
-              },
-              {
-                "heading": "Еда",
-                "description": "Всегда заказывайте фирменный бургер, вы не разочаруетесь!",
-                "icon": "eat"
-              }
-            ]
+            "features": {
+              "mix": "advantages__features",
+              "list": [
+                {
+                  "heading": "Жилье",
+                  "description": "Рекомендуем пожить в настоящем мотеле, все как в кино!",
+                  "modifier": "features__item--house"
+                },
+                {
+                  "heading": "Сувениры",
+                  "description": "Не только китайского, но и местного производства!",
+                  "modifier": "features__item--gifts features__item--order-3"
+                },
+                {
+                  "heading": "Еда",
+                  "description": "Всегда заказывайте фирменный бургер, вы не разочаруетесь!",
+                  "modifier": "features__item--eat"
+                }
+              ]
+            }
           },
           {
-            "title": "Там есть Мост дьявола",
+            "title": "Там есть Мост дьявола",
             "description": "Да, по нему можно пройти! Если вы осмелитесь, конечно",
             "img": "img/reason-2.jpg"
           },
@@ -43,7 +46,7 @@
           },
           {
             "title": "Красивая дорога",
-            "description": "Ехать в Седону из Лас-Вегаса совсем не скучно!"
+            "description": "Ехать в Седону из<br class=\"no-mobile\">Лас-Вегаса совсем не скучно!"
           },
           {
             "title": "Мало туристов",
