@@ -1,6 +1,6 @@
 'use strict';
 
-const { gulp, plugins } = require(`../store`);
+const { gulp, plugins } = require(`../../store`);
 
 gulp.task(`validate:html`, () => {
   return gulp.src([`build/**/*.html`, `!build/amp/**/*.html`])

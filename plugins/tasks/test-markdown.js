@@ -1,7 +1,7 @@
 'use strict';
 // Линтинг markdown-файлов
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`test:markdown`, () => {
   return gulp.src(settings.src.markdown)

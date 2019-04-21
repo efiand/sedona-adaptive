@@ -1,7 +1,7 @@
 'use strict';
 // Запуск сервера browsersync и слежения за изменениями исходников
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`server`, () => {
   plugins.server.init({ server: `build` });

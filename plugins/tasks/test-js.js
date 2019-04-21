@@ -1,9 +1,9 @@
 'use strict';
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
-gulp.task(`test:njk`, () => {
-  return gulp.src(settings.src.njk)
+gulp.task(`test:js`, () => {
+  return gulp.src(settings.src.js)
     .pipe(plugins.plumber())
     .pipe(plugins.lintspaces({ editorconfig: `.editorconfig`}))
     .pipe(plugins.lintspaces.reporter());

@@ -1,7 +1,7 @@
 'use strict';
 // Создание символьного векторного спрайта
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`symbols`, () => {
   return gulp.src(settings.src.symbols)

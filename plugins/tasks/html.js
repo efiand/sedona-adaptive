@@ -1,6 +1,6 @@
 'use strict';
 
-const { gulp, plugins, filters, settings } = require(`../store`);
+const { gulp, plugins, filters, settings } = require(`../../store`);
 
 gulp.task(`html`, () => {
   return gulp.src(`pages/**/*.njk`)
@@ -16,7 +16,7 @@ gulp.task(`html`, () => {
     .pipe(plugins.nunjucksRender({
       manageEnv: (env) => {
         env.opts.autoescape = false;
-        env.addGlobal(`template`, `components/_page/page.njk`);
+        env.addGlobal(`template`, settings.template);
 
         Object.keys(filters).forEach((filter) => {
           env.addFilter(filter, filters[filter]);

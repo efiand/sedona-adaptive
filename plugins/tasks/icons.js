@@ -1,7 +1,7 @@
 'use strict';
 // Сборка фонового векторного спрайта
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`icons`, () => {
   return gulp.src(settings.src.icons)

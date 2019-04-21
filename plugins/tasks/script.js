@@ -1,6 +1,6 @@
 'use strict';
 
-const { gulp, plugins, settings } = require(`../store`);
+const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`script`, () => {
   return gulp.src(`assets/js/script.js`)

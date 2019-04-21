@@ -1,16 +1,16 @@
 'use strict';
 
 const src = {
-  njk: [`**/*.njk`, `!node_modules/**/*.njk`, `data/**/*.json`],
-  js: [`assets/**/*.js`, `components/**/*.js`, `data/**/*.js`],
+  njk: [`**/*.njk`, `!node_modules/**/*.njk`, `assets/**/*.json`],
+  js: [`assets/**/*.js`, `components/**/*.js`],
   scss: [`**/*.scss`, `!node_modules/**/*.scss`],
-  img: `data/img/**/*.{jpg,png,svg}`,
-  webp: `data/img/**/*.{jpg,png}`,
+  img: `assets/img/**/*.{jpg,png,svg}`,
+  webp: [`assets/img/**/*.{jpg,png}`, `static/img/**/*.{jpg,png}`],
   icons: `assets/icons/**/*.svg`,
   symbols: `assets/symbols/**/*.svg`,
   static: [`static/**/*`, `static/**/.*`],
   staticText: `static/**/*.{html,css,txt,md,svg,js,json,php,xml}`,
-  gulpfile: `gulpfile.js/**/*.js`,
+  gulpfile: [`gulpfile.js`, `plugins/**/*.js`, `store/**/*.js`],
   markdown: [`**/*.md`, `!node_modules/**/*.md`]
 };
 const svgoSettings = { floatPrecision: 2 };
@@ -51,6 +51,7 @@ module.exports = {
       gulpfile: [`test:gulpfile`],
       markdown: [`test:markdown`]
     },
+    template: `layouts/default.njk`,
     svgo: {
       plugins: [
         { removeViewBox: false },
