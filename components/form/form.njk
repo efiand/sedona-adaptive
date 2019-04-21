@@ -1,16 +1,18 @@
 <form class="form" action="{{ params.action }}" method="post">
   {% for fieldset in params.fieldsets %}
-    <div class="form__group{{ " form__group--" + fieldset.modifier if fieldset.modifier }}">
+    <div class="form__group form__group--{{ fieldset.modifier }}">
       <fieldset>
-        <legend>
+        <legend class="form__group-heading form__group-heading--{{ fieldset.modifier }}">
           {{ fieldset.legend }}
         </legend>
 
-        {{ "<div class=\"form__group-inner\">" if fieldset.hasInner }}
+        {{ "<div class=\"form__group-inner form__group-inner--" + fieldset.modifier + "\">" if fieldset.hasInner }}
           {% for field in fieldset.fields %}
             {% if field.type === 'radio' or field.type === 'checkbox' %}
+              {% set classes = "form__checker form__checker--" + {{ fieldset.modifier }} %}
               {% include "components/checker/checker.njk" %}
             {% else %}
+              {% set classes = "form__field" %}
               {% include "components/field/field.njk" %}
             {% endif %}
           {% endfor %}

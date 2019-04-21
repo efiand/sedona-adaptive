@@ -4,12 +4,13 @@
   {% set attrs = attrs + " required" %}
 {% endif %}
 
-<p class="field form__field {{ " field--" + field.name if field.hasIcon }}">
-  <label{{ " class=\"visually-hidden\"" if field.hideLabel }} for="{{ field.name }}">
+<p class="field {{ "field--" + field.name if field.hasIcon }} {{ classes }}">
+  <label class="{{ "visually-hidden" if field.hideLabel else "field__label" }}"
+    for="{{ field.name }}">
     {{ field.label }}
   </label>
   {% if field.type === "textarea" %}
-    <textarea class="field__input" {{ attrs }}></textarea>
+    <textarea class="field__input field__input--message" {{ attrs }}></textarea>
   {% else %}
     <input class="field__input" type="{{ field.type }}" {{ attrs }}>
   {% endif %}

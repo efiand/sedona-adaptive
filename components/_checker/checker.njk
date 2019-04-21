@@ -1,7 +1,8 @@
-<p class="form__checker checker{{ " checker--checkbox" if field.type === "checkbox" }}">
+<p class="checker {{ classes }}">
   <input class="visually-hidden" id="{{ field.name }}-{{ loop.index }}" name="{{ field.name }}"
     type="{{ field.type }}"{{ " checked" if field.checked }}>
-  <label for="{{ field.name }}-{{ loop.index }}">
+  <label class="checker__label {{ "checker__label--checkbox" if field.type === "checkbox" }}"
+    for="{{ field.name }}-{{ loop.index }}">
     {{ field.label }}
   </label>
 </p>

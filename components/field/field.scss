@@ -2,17 +2,6 @@
   display: flex;
   line-height: 26px;
 
-  label {
-    margin: 18px 15px 0 0;
-    color: $color-description;
-  }
-
-  textarea {
-    height: 128px;
-    overflow: auto;
-    resize: none;
-  }
-
   &--phone,
   &--mail {
     position: relative;
@@ -51,6 +40,11 @@
   }
 }
 
+.field__label {
+  margin: 18px 15px 0 0;
+  color: $color-description;
+}
+
 .field__input {
   width: 100%;
   height: 26px;
@@ -62,6 +56,11 @@
   border: 4px solid $color-back;
   outline: none;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &::placeholder {
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+  }
 
   &:hover {
     background-color: $color-back-disabled;
@@ -77,8 +76,9 @@
     }
   }
 
-  &::placeholder {
-    color: inherit;
-    transition: color 0.3s ease-in-out;
+  &--message {
+    height: 128px;
+    overflow: auto;
+    resize: none;
   }
 }

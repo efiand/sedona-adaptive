@@ -23,39 +23,12 @@
     margin: 63px 0 0;
   }
 
-  legend {
-    margin: 0 0 20px;
-    padding: 0;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    background-color: #ffffff;
-
-    @media ($tablet) {
-      position: relative;
-      top: -31px;
-      display: table;
-      width: 300px;
-      margin: 0 auto;
-      padding: 0 50px;
-      font-size: 21px;
-    }
-  }
-
   &--name {
     @media ($tablet) {
       width: 50%;
       margin: 0;
       padding: 18px 0 0 58px;
       border-top: none;
-
-      legend {
-        position: static;
-        margin: 0 0 56px;
-        padding: 0;
-        text-align: left;
-      }
     }
 
     @media ($desktop) {
@@ -73,8 +46,14 @@
       margin: 0;
       padding: 18px 50px 0 0;
       border-top: none;
+    }
 
-      &::after {
+    @media ($desktop) {
+      padding: 3px 50px 0 4px;
+    }
+
+    &::after {
+      @media ($tablet) {
         content: "";
         position: absolute;
         top: 24px;
@@ -84,27 +63,8 @@
         background-color: #e2e2e2;
       }
 
-      legend {
-        position: static;
-        margin: 0 0 56px;
-        padding: 0;
-        text-align: left;
-      }
-
-      .form__checker {
-        margin: 0 0 18px;
-      }
-    }
-
-    @media ($desktop) {
-      padding: 3px 50px 0 4px;
-
-      &::after {
+      @media ($desktop) {
         top: 8px;
-      }
-
-      legend {
-        margin: 0 75px 56px;
       }
     }
   }
@@ -112,17 +72,6 @@
   &--sights {
     @media ($tablet) {
       margin: 55px 0 -23px;
-
-      legend {
-        top: -44px;
-      }
-
-      .form__group-inner {
-        display: flex;
-        flex-wrap: wrap;
-        width: 520px;
-        margin: 0 auto;
-      }
 
       .form__checker {
         width: 50%;
@@ -179,6 +128,65 @@
   }
 }
 
+.form__group-title {
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  background-color: #ffffff;
+
+  @media ($tablet) {
+    position: relative;
+    top: -31px;
+    display: table;
+    width: 300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    font-size: 21px;
+  }
+
+  &--name {
+    @media ($tablet) {
+      position: static;
+      margin: 0 0 56px;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &--impressions {
+    @media ($tablet) {
+      position: static;
+      margin: 0 0 56px;
+      padding: 0;
+      text-align: left;
+    }
+
+    @media ($desktop) {
+      margin: 0 75px 56px;
+    }
+  }
+
+  &--sights {
+    @media ($tablet) {
+      top: -44px;
+    }
+  }
+}
+
+.form__group-inner {
+  &--sights {
+    @media ($tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 520px;
+      margin: 0 auto;
+    }
+  }
+}
+
 .form__group--contacts {
   padding-bottom: 16px;
 
@@ -231,6 +239,14 @@
 
     @media ($desktop) {
       width: 213px;
+    }
+  }
+}
+
+.form__checker {
+  &--impressions {
+    @media ($tablet) {
+      margin: 0 0 18px;
     }
   }
 }
