@@ -67,6 +67,10 @@
       padding: 568px 0 0;
     }
 
+    @media ($desktop) {
+      padding: 568px 0 0;
+    }
+
     &::before {
       height: 390px;
       background-position: 50% 0;
@@ -75,12 +79,20 @@
       @media ($tablet) {
         height: 518px;
       }
+
+      @media ($desktop) {
+        height: 518px;
+      }
     }
 
     &::after {
       top: 364px;
 
       @media ($tablet) {
+        top: 462px;
+      }
+
+      @media ($desktop) {
         top: 462px;
       }
     }
@@ -109,6 +121,10 @@
 
     @media ($tablet) {
       top: 78px;
+    }
+
+    @media ($desktop) {
+      top: 80px;
     }
   }
 }

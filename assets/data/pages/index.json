@@ -13,9 +13,21 @@
           {
             "title": "Настоящий городок",
             "description": "Седона не аттракцион для туристов, там течет своя жизнь",
-            "img": "img/reason-1.jpg",
+            "picture": {
+              "classes": "advantages__picture",
+              "img": {
+                "src": "img/reason-1.jpg",
+                "alt": "Вид города"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/reason-1-tablet.jpg"
+                }
+              ]
+            },
             "features": {
-              "mix": "advantages__features",
+              "classes": "advantages__features",
               "list": [
                 {
                   "heading": "Жилье",
@@ -24,7 +36,7 @@
                 },
                 {
                   "heading": "Сувениры",
-                  "description": "Не только китайского, но и местного производства!",
+                  "description": "Не только китайского, <br class=\"no-mobile\">но и местного производства!",
                   "modifier": "features__item--gifts features__item--order-3"
                 },
                 {
@@ -37,8 +49,20 @@
           },
           {
             "title": "Там есть Мост дьявола",
-            "description": "Да, по нему можно пройти! Если вы осмелитесь, конечно",
-            "img": "img/reason-2.jpg"
+            "description": "Да, по нему можно пройти! <br class=\"desktop\">Если вы осмелитесь, конечно",
+            "picture": {
+              "classes": "advantages__picture advantages__picture--even",
+              "img": {
+                "src": "img/reason-2.jpg",
+                "alt": "Мост дьявола"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/reason-2-tablet.jpg"
+                }
+              ]
+            }
           },
           {
             "title": "Небольшая площадь",
@@ -46,7 +70,7 @@
           },
           {
             "title": "Красивая дорога",
-            "description": "Ехать в Седону из<br class=\"no-mobile\">Лас-Вегаса совсем не скучно!"
+            "description": "Ехать в Седону из <br class=\"no-mobile no-desktop\">Лас-Вегаса совсем не скучно!"
           },
           {
             "title": "Мало туристов",
@@ -60,7 +84,7 @@
       "params": {
         "heading": "Поиск гостиницы",
         "lead": "Заинтересовались?",
-        "description": "Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне",
+        "description": "Укажите предполагаемые даты поездки, <br class=\"no-mobile\">и мы покажем вам лучшие предложения гостиниц в Седоне",
         "link": {
           "href": "#",
           "text": "Найти гостиницу"
@@ -71,8 +95,21 @@
       "name": "map",
       "params": {
         "poster": {
-          "src": "img/map.jpg",
-          "alt": "Карта Седоны"
+          "classes": "map__poster",
+          "img": {
+            "src": "img/map.jpg",
+            "alt": "Карта Седоны"
+          },
+          "medias": [
+            {
+              "query": "(min-width: 1200px)",
+              "srcset": "img/map-desktop.jpg"
+            },
+            {
+              "query": "(min-width: 768px)",
+              "srcset": "img/map-tablet.jpg"
+            }
+          ]
         }
       }
     }

@@ -1,17 +1,13 @@
 .footer {
   margin: 0 auto;
-  padding: 36px 20px 30px;
+  padding: 36px 60px 30px;
 
   @media ($tablet) {
     display: flex;
-    justify-content: space-between;
-    width: 648px;
-    padding-top: 97px;
   }
 
   @media ($desktop) {
-    width: 960px;
-    padding-top: 102px;
+    padding: 36px 120px 30px;
   }
 }
 
@@ -22,6 +18,10 @@
   font-size: 21px;
   line-height: 26px;
   text-decoration: none;
+
+  @media ($tablet) {
+    margin: 8px auto 0 0;
+  }
 }
 
 .footer__developer {

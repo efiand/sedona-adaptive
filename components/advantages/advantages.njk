@@ -11,7 +11,7 @@
 
   <ol class="advantages__list page__list">
     {% for item in params.list %}
-      {% if item.img %}
+      {% if item.picture %}
         <li class="advantages__item advantages__item--with-img">
           <div class="advantages__info advantages__info--with-img">
             <b class="advantages__item-heading">
@@ -22,11 +22,8 @@
             </p>
           </div>
 
-          <picture class="advantages__picture
-            {{ "advantages__picture--even" if loop.index % 2 === 0 }}">
-            <source type="image/webp" srcset="{{ item.img | nameWithoutExt }}.webp"/>
-            <img class="advantages__img" src="{{ item.img }}" alt="{{ item.title }}">
-          </picture>
+          {% set picture = item.picture %}
+          {% include "components/_picture/picture.njk" %}
 
           {% if item.features %}
             {% set features = item.features %}

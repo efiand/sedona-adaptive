@@ -1,4 +1,0 @@
-// letter-spacing из Photoshop
-@function ps2css($value) {
-  @return $value / 1000em;
-}

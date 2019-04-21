@@ -18,3 +18,9 @@
     display: none;
   }
 }
+
+.desktop {
+  @media ($no-desktop) {
+    display: none;
+  }
+}

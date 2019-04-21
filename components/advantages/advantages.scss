@@ -88,22 +88,30 @@
     padding: 44px;
   }
 
+  @media ($desktop) {
+    padding: 45px 50px 64px;
+  }
+
   &--with-img {
     padding: 36px 28px 40px;
     color: $color-accent-text;
     background-color: $color-accent-back;
+
+    @media ($desktop) {
+      padding: 52px 60px;
+    }
   }
 }
 
 .advantages__item-heading {
   display: block;
-  margin: 0 0 10px;
+  margin: 0 auto 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 
   @media ($tablet) {
-    padding: 0 4px;
+    width: 160px;
     font-size: 21px;
   }
 }
@@ -128,12 +136,11 @@
 }
 
 .advantages__picture {
-  position: relative;
-  height: 256px;
-  overflow: hidden;
+  height: 260px;
 
   @media ($tablet) {
     width: 100% * 2/3;
+    height: 256px;
   }
 
   &--even {
@@ -141,14 +148,6 @@
       order: -1;
     }
   }
-}
-
-.advantages__img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
 }
 
 .advantages__features {
