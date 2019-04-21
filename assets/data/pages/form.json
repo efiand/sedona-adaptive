@@ -38,12 +38,11 @@
           {
             "legend": "Контактная информация:",
             "modifier": "contacts",
-            "hasInner": true,
             "fields": [
               {
                 "type": "tel",
                 "name": "phone",
-                "hasIcon": "true",
+                "icon": "phone",
                 "label": "<span class=\"no-desktop\">Контактный </span>телефон*:",
                 "placeholder": "Введите телефон",
                 "required": true
@@ -51,7 +50,7 @@
               {
                 "type": "email",
                 "name": "mail",
-                "hasIcon": "true",
+                "icon": "mail",
                 "label": "Электронная почта*:",
                 "placeholder": "Введите e-mail",
                 "required": true
@@ -83,7 +82,6 @@
           {
             "legend": "Посещенные достопримечательности:",
             "modifier": "sights",
-            "hasInner": true,
             "fields": [
               {
                 "type": "checkbox",

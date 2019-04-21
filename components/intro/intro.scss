@@ -40,7 +40,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 132px;
+    top: 134px;
     left: 0;
     width: 100%;
     height: 26px;
@@ -48,7 +48,7 @@
     background-size: 100% 26px;
 
     @media ($tablet) {
-      top: 232px;
+      top: 234px;
       height: 56px;
       background-image: url("../img/intro-decor-tablet.svg");
       background-size: 100% 56px;
@@ -107,7 +107,7 @@
   transform: translateX(-50%);
 
   @media ($tablet) {
-    top: 94px;
+    top: 95px;
     width: 460px;
   }
 
@@ -126,5 +126,34 @@
     @media ($desktop) {
       top: 80px;
     }
+  }
+}
+
+.intro__heading {
+  margin: 0 0 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+
+  @media ($tablet) {
+    margin: 0 0 32px;
+    font-size: 30px;
+  }
+}
+
+.intro__description {
+  max-width: 445px;
+  margin: 0 auto 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-description;
+
+  @media ($tablet) {
+    margin-bottom: 72px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 58px;
   }
 }

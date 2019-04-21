@@ -1,6 +1,4 @@
 .form {
-  margin: -11px 0 0;
-
   @media ($tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -13,255 +11,253 @@
 }
 
 .form__group {
-  padding: 18px 20px 6px;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-top: 1px solid $color-back-darker;
 
   @media ($tablet) {
-    box-sizing: border-box;
     width: 100%;
-    margin: 63px 0 0;
   }
 
   &--name {
     @media ($tablet) {
       width: 50%;
-      margin: 0;
-      padding: 18px 0 0 58px;
-      border-top: none;
     }
 
     @media ($desktop) {
-      padding: 3px 0 0 80px;
+      box-sizing: border-box;
+      padding-left: 20px;
+    }
+  }
+
+  &--contacts {
+    @media ($tablet) {
+      margin: 32px 0 14px;
     }
   }
 
   &--impressions {
-    padding-bottom: 17px;
-
     @media ($tablet) {
       position: relative;
       order: -1;
       width: 50%;
-      margin: 0;
-      padding: 18px 50px 0 0;
-      border-top: none;
     }
 
-    @media ($desktop) {
-      padding: 3px 50px 0 4px;
-    }
-
-    &::after {
+    &::before {
       @media ($tablet) {
         content: "";
         position: absolute;
-        top: 24px;
+        top: 6px;
         right: 0;
-        bottom: 19px;
+        bottom: 24px;
         width: 1px;
         background-color: #e2e2e2;
       }
-
-      @media ($desktop) {
-        top: 8px;
-      }
     }
-  }
-
-  &--sights {
-    @media ($tablet) {
-      margin: 55px 0 -23px;
-
-      .form__checker {
-        width: 50%;
-        margin: 0;
-      }
-
-      label {
-        margin: 1px 0 16px 31px;
-      }
-    }
-
-    @media ($desktop) {
-      padding: 18px 0 0;
-
-      .form__group-inner {
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .form__checker {
-        width: auto;
-      }
-
-      label {
-        margin: 1px 5px 20px 0;
-      }
-    }
-  }
-
-  &--message {
-    @media ($tablet) {
-      padding: 44px 0 0;
-    }
-
-    legend {
-      margin-bottom: 17px;
-
-      @media ($tablet) {
-        top: -57px;
-      }
-    }
-
-    .form__field {
-      @media ($tablet) {
-        margin-bottom: 33px;
-      }
-    }
-  }
-
-  fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
   }
 }
 
-.form__group-title {
-  margin: 0 0 20px;
-  padding: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+.form__group-heading-wrapper {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px 20px 22px;
   text-align: center;
-  background-color: #ffffff;
 
   @media ($tablet) {
-    position: relative;
-    top: -31px;
-    display: table;
-    width: 300px;
-    margin: 0 auto;
-    padding: 0 50px;
-    font-size: 21px;
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-back-darker;
+
+    @media ($tablet) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &--name {
     @media ($tablet) {
-      position: static;
-      margin: 0 0 56px;
-      padding: 0;
+      padding: 0 0 58px 58px;
       text-align: left;
+    }
+
+    &::before {
+      @media ($tablet) {
+        content: none;
+      }
+    }
+  }
+
+  &--contacts {
+    @media ($tablet) {
+      margin-bottom: 26px;
     }
   }
 
   &--impressions {
+    padding-bottom: 25px;
+
     @media ($tablet) {
-      position: static;
-      margin: 0 0 56px;
-      padding: 0;
-      text-align: left;
+      padding: 0 50px 60px 0;
     }
 
-    @media ($desktop) {
-      margin: 0 75px 56px;
+    &::before {
+      @media ($tablet) {
+        content: none;
+      }
     }
   }
 
-  &--sights {
+  &--sights,
+  &--message {
+    padding-bottom: 18px;
+  }
+}
+
+.form__group-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #ffffff;
+
+  @media ($tablet) {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 21px;
+  }
+
+  &--name,
+  &--impressions {
     @media ($tablet) {
-      top: -44px;
+      width: auto;
     }
   }
 }
 
-.form__group-inner {
+.form__inputs {
+  clear: both;
+  padding: 0 20px 16px;
+
+  @media ($tablet) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &--name {
+    padding-bottom: 5px;
+
+    @media ($tablet) {
+      padding-left: 60px;
+    }
+  }
+
+  &--contacts {
+    @media ($desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 100px 0 0;
+    }
+  }
+
+  &--impressions {
+    padding-bottom: 14px;
+  }
+
   &--sights {
+    padding-bottom: 0;
+
     @media ($tablet) {
       display: flex;
       flex-wrap: wrap;
       width: 520px;
       margin: 0 auto;
+      padding: 42px 0 36px 60px;
     }
-  }
-}
 
-.form__group--contacts {
-  padding-bottom: 16px;
-
-  @media ($tablet) {
-    padding: 11px 0 0;
-  }
-
-  .form__group-inner {
     @media ($desktop) {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 48px;
+      justify-content: space-between;
+      width: 100%;
+      padding-left: 0;
     }
   }
 
-  .form__field {
-    position: relative;
-    flex-wrap: wrap;
-    margin: 0 0 12px;
-
+  &--message {
     @media ($tablet) {
-      margin: 0 0 23px;
+      padding: 58px 0 24px;
     }
 
     @media ($desktop) {
-      display: flex;
-
-      &:nth-child(odd) {
-        margin-right: auto;
-      }
-    }
-  }
-
-  legend {
-    @media ($tablet) {
-      top: -24px;
-    }
-  }
-
-  label {
-    margin: 0 20px 7px;
-
-    @media ($desktop) {
-      margin: 17px 16px 7px 0;
-    }
-  }
-
-  input {
-    padding-right: 78px;
-
-    @media ($desktop) {
-      width: 213px;
-    }
-  }
-}
-
-.form__checker {
-  &--impressions {
-    @media ($tablet) {
-      margin: 0 0 18px;
+      padding-top: 56px;
     }
   }
 }
 
 .form__field {
   margin: 0 0 20px;
+
+  &--contacts {
+    margin: 0 0 12px;
+
+    @media ($tablet) {
+      margin: 0 0 24px;
+    }
+
+    @media ($desktop) {
+      display: flex;
+      margin: 0 0 22px;
+    }
+  }
+}
+
+.form__checker {
+  width: 280px;
+  margin: 0 auto 14px;
+
+  &--sights {
+    margin-bottom: 25px;
+
+    @media ($tablet) {
+      width: 50%;
+      margin: 0 auto 32px 0;
+    }
+
+    @media ($desktop) {
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  &--impressions {
+    @media ($tablet) {
+      margin: 0 0 23px;
+    }
+  }
 }
 
 .form__submit-wrapper {
-  margin: 25px auto 37px;
+  margin: 14px auto 36px;
 
   @media ($tablet) {
     display: flex;
     width: 100%;
-    margin: 25px 0 0;
+    margin-bottom: 60px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 65px;
   }
 }
 
@@ -273,7 +269,6 @@
 
   @media ($tablet) {
     width: 324px;
-    margin-right: auto;
     margin-left: 0;
   }
 
@@ -283,10 +278,5 @@
 }
 
 .form__submit-alert {
-  max-width: 300px;
-  margin: 21px 0 0;
-
-  @media ($mobile) {
-    display: none;
-  }
+  margin: 18px 0 0;
 }
