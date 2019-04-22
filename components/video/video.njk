@@ -1,0 +1,29 @@
+<section class="video">
+  <h2 class="visually-hidden">
+    {{ params.heading }}
+  </h2>
+  <b class="video__lead">
+    {{ params.lead }}
+  </b>
+  <p class="video__description">
+    {{ params.description }}
+  </p>
+
+  <video class="video__src" src="params.src"></video>
+
+  <ul class="video__controls">
+    {% for control in params.controls %}
+    <li class="video__bar">
+      <button class="video__control video__control--{{ control.alias }}">
+        <span class="visually-hidden">
+          {{ control.title }}
+        </span>
+        {% if not control.noIcon %}
+          <svg class="video__icon" role="presentation">
+            <use xlink:href="img/symbols.svg#{{ control.alias }}" />
+          </svg>
+        {% endif %}
+      </button>
+    </li>
+  </ul>
+</section>

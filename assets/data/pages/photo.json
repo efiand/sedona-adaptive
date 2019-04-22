@@ -5,31 +5,97 @@
     {
       "name": "photos",
       "params": {
-        "texts": {
-          "author": "Автор фото:",
+        "heading": "Фото",
+        "labels": {
+          "author": "Автор фото: ",
           "like": "Поставить лайк"
         },
         "action": "https://echo.htmlacademy.ru",
         "photos": [
           {
-            "src": "img/photo-1.jpg",
             "author": "Борис",
-            "likes": 1350
+            "likes": 1350,
+            "picture": {
+              "classes": "photos__picture",
+              "img": {
+                "src": "img/photo-1.jpg",
+                "alt": "Неродные просторы"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 1200px)",
+                  "srcset": "img/photo-1-desktop.jpg"
+                },
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/photo-1-tablet.jpg"
+                }
+              ]
+            }
           },
           {
-            "src": "img/photo-2.jpg",
             "author": "Сергей",
-            "likes": 143
+            "likes": 143,
+            "picture": {
+              "classes": "photos__picture",
+              "img": {
+                "src": "img/photo-2.jpg",
+                "alt": "Местная растительность"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 1200px)",
+                  "srcset": "img/photo-2-desktop.jpg"
+                },
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/photo-2-tablet.jpg"
+                }
+              ]
+            }
           },
           {
-            "src": "img/photo-3.jpg",
             "author": "Петр",
-            "likes": 96
+            "likes": 96,
+            "picture": {
+              "classes": "photos__picture",
+              "img": {
+                "src": "img/photo-3.jpg",
+                "alt": "Дорога на север"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 1200px)",
+                  "srcset": "img/photo-3-desktop.jpg"
+                },
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/photo-3-tablet.jpg"
+                }
+              ]
+            }
           },
           {
             "src": "img/photo-4.jpg",
             "author": "Антон",
-            "likes": 254
+            "likes": 254,
+            "picture": {
+              "classes": "photos__picture",
+              "img": {
+                "src": "img/photo-4.jpg",
+                "alt": "Мост дьявола"
+              },
+              "medias": [
+                {
+                  "query": "(min-width: 1200px)",
+                  "srcset": "img/photo-4-desktop.jpg"
+                },
+                {
+                  "query": "(min-width: 768px)",
+                  "srcset": "img/photo-4-tablet.jpg"
+                }
+              ]
+            }
           }
         ]
       }
@@ -46,8 +112,12 @@
         "controls": [
           {
             "alias": "replay",
-            "title": "Заново",
-            "gap": true
+            "title": "Заново"
+          },
+          {
+            "alias": "pin",
+            "title": "Выбор кадра",
+            "noIcon": true
           },
           {
             "alias": "subtitles",

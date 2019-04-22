@@ -1,0 +1,34 @@
+<section class="photo">
+  <h2 class="visually-hidden">
+    {{ params.heading }}
+  </h2>
+
+  <ul class="photos__list">
+    {% for photo in params.photos %}
+      <li class="photos__item">
+        {% set picture = photo.picture %}
+        {% include "components/picture/picture.njk" %}
+
+        <div class="photos__info">
+          <h3 class="photos__name">
+            {{ picture.img.alt }}
+          </h3>
+          <p class="photos__description">
+            {{ params.labels.author }}{{ photo.author }}
+          </p>
+
+          <form class="photos__likes" action="params.action" method="post">
+            <button class="photos__like-btn" type="submit" name="like" value="{{ picture.img.alt }}">
+              <span class="visually-hidden">
+                {{ params.labels.like }}
+              </span>
+            </button>
+            <p class="photos__count">
+              {{ photo.likes }}
+            </p>
+          </form>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
