@@ -22,6 +22,9 @@
               <span class="visually-hidden">
                 {{ params.labels.like }}
               </span>
+              <svg class="photos__like-icon" role="presentation">
+                <use xlink:href="{{ params.likeIcon }}" />
+              </svg>
             </button>
             <p class="photos__count">
               {{ photo.likes }}

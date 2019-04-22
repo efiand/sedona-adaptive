@@ -16,17 +16,18 @@
             "picture": {
               "classes": "advantages__picture",
               "img": {
+                "alt": "Вид города",
                 "src": "img/reason-1.jpg",
-                "alt": "Вид города"
+                "srcset": "img/reason-1@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/reason-1-desktop.jpg"
+                  "srcset": "img/reason-1-desktop.jpg, img/reason-1-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/reason-1-tablet.jpg"
+                  "srcset": "img/reason-1-tablet.jpg, img/reason-1-tablet@2x.jpg 2x"
                 }
               ]
             },
@@ -57,17 +58,18 @@
             "picture": {
               "classes": "advantages__picture advantages__picture--even",
               "img": {
+                "alt": "Мост дьявола",
                 "src": "img/reason-2.jpg",
-                "alt": "Мост дьявола"
+                "srcset": "img/reason-2@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/reason-2-desktop.jpg"
+                  "srcset": "img/reason-2-desktop.jpg, img/reason-2-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/reason-2-tablet.jpg"
+                  "srcset": "img/reason-2-tablet.jpg, img/reason-2-tablet@2x.jpg 2x"
                 }
               ]
             }
@@ -106,16 +108,17 @@
           "classes": "map__poster",
           "img": {
             "src": "img/map.jpg",
+            "srcset": "img/map@2x.jpg 2x",
             "alt": "Карта Седоны"
           },
           "medias": [
             {
               "query": "(min-width: 1200px)",
-              "srcset": "img/map-desktop.jpg"
+              "srcset": "img/map-desktop.jpg, img/map-desktop@2x.jpg 2x"
             },
             {
               "query": "(min-width: 768px)",
-              "srcset": "img/map-tablet.jpg"
+              "srcset": "img/map-tablet.jpg, img/map-tablet@2x.jpg 2x"
             }
           ]
         }

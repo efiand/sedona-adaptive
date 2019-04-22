@@ -1,3 +1,6 @@
+@include font-face(PT Sans, 400, normal, PT Sans, ptsans);
+@include font-face(PT Sans, 700, normal, PT Sans Bold, ptsansbold);
+
 a {
   color: inherit;
   text-decoration-skip-ink: none;

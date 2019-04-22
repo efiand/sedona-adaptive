@@ -1,5 +1,7 @@
 .video {
   position: relative;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 32px 20px 40px;
   text-align: center;
   border-top: 1px solid $color-back-darker;
@@ -7,6 +9,11 @@
   @media ($tablet) {
     padding: 65px 60px 40px;
     border: none;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 45px;
+    padding-top: 70px;
   }
 }
 
@@ -31,6 +38,10 @@
 
   @media ($tablet) {
     margin: 0 auto 74px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 70px;
   }
 }
 
@@ -143,10 +154,18 @@
   &:hover,
   &:focus {
     color: $color-description;
+
+    @media ($tablet) {
+      color: rgba(#ffffff, 0.6);
+    }
   }
 
   &:active {
     color: rgba($color-description, 0.3);
+
+    @media ($tablet) {
+      color: rgba(#ffffff, 0.3);
+    }
   }
 
   &--replay {

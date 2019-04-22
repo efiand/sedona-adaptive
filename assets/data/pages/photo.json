@@ -10,6 +10,7 @@
           "author": "Автор фото: ",
           "like": "Поставить лайк"
         },
+        "likeIcon": "img/symbols.svg#like",
         "action": "https://echo.htmlacademy.ru",
         "photos": [
           {
@@ -18,17 +19,18 @@
             "picture": {
               "classes": "photos__picture photos__picture--lead",
               "img": {
+                "alt": "Неродные просторы",
                 "src": "img/photo-1.jpg",
-                "alt": "Неродные просторы"
+                "srcset": "img/photo-1@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/photo-1-desktop.jpg"
+                  "srcset": "img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/photo-1-tablet.jpg"
+                  "srcset": "img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg 2x"
                 }
               ]
             }
@@ -39,17 +41,18 @@
             "picture": {
               "classes": "photos__picture",
               "img": {
+                "alt": "Местная растительность",
                 "src": "img/photo-2.jpg",
-                "alt": "Местная растительность"
+                "srcset": "img/photo-2@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/photo-2-desktop.jpg"
+                  "srcset": "img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/photo-2-tablet.jpg"
+                  "srcset": "img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg 2x"
                 }
               ]
             }
@@ -60,17 +63,18 @@
             "picture": {
               "classes": "photos__picture",
               "img": {
+                "alt": "Дорога на север",
                 "src": "img/photo-3.jpg",
-                "alt": "Дорога на север"
+                "srcset": "img/photo-3@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/photo-3-desktop.jpg"
+                  "srcset": "img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/photo-3-tablet.jpg"
+                  "srcset": "img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg 2x"
                 }
               ]
             }
@@ -82,17 +86,18 @@
             "picture": {
               "classes": "photos__picture",
               "img": {
+                "alt": "Мост дьявола",
                 "src": "img/photo-4.jpg",
-                "alt": "Мост дьявола"
+                "srcset": "img/photo-4@2x.jpg 2x"
               },
               "medias": [
                 {
                   "query": "(min-width: 1200px)",
-                  "srcset": "img/photo-4-desktop.jpg"
+                  "srcset": "img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg 2x"
                 },
                 {
                   "query": "(min-width: 768px)",
-                  "srcset": "img/photo-4-tablet.jpg"
+                  "srcset": "img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg 2x"
                 }
               ]
             }
