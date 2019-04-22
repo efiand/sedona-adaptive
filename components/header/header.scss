@@ -22,9 +22,37 @@
 }
 
 .header__nav-list {
+  transform-origin: 50% 0;
+
   @media ($tablet) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &--js {
+    @media ($mobile) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  &--closed {
+    @media ($mobile) {
+      transform: scaleY(0);
+      visibility: hidden;
+      transition: transform 0.3s ease-in, visibility 0s 0.6s;
+    }
+  }
+
+  &--opened {
+    @media ($mobile) {
+      max-height: 100vh;
+      overflow: auto;
+      transition: transform 0.6s ease-out;
+    }
   }
 }
 
@@ -97,5 +125,77 @@
 
   &--last {
     box-shadow: inset 0 -7px 7px -7px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+.header__toggler {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 1;
+  width: 24px;
+  height: 22px;
+  color: $color-accent-back;
+  background-color: transparent;
+  background-image: linear-gradient(transparent 9px, $color-accent-back 9px, $color-accent-back 13px, transparent 13px);
+  border: none;
+
+  @include interactive;
+
+  @media ($tablet) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--closer {
+    position: fixed;
+    color: #ffffff;
+    background-image: none;
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+      top: 9px;
+      left: -1px;
+      width: 26px;
+      transform: rotate(45deg);
+      transition: top 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out, left 0.3s 0.3s, width 0.3s 0.3s;
+    }
+
+    &::after {
+      bottom: 9px;
+      left: -1px;
+      width: 26px;
+      transform: rotate(-45deg);
+      transition: bottom 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out, left 0.3s 0.3s, width 0.3s 0.3s;
+    }
+  }
+
+  &--opener {
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+      transition: top 0.3s 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    &::after {
+      transition: bottom 0.3s 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
   }
 }

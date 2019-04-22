@@ -1,10 +1,4 @@
 <header class="header page__list">
-  <button class="header-toggler hidden">
-    <span class="visually-hidden">
-      {{ layout.toggleMenuText }}
-    </span>
-  </button>
-
   <nav class="header__nav">
     <a class="header__logo" {{ "href=\"index.html\"" if layout.isIndex }}>
       <picture>
@@ -27,6 +21,12 @@
       {% endfor %}
     </ul>
   </nav>
+
+  <button class="header__toggler hidden">
+    <span class="visually-hidden">
+      {{ layout.toggleMenuText }}
+    </span>
+  </button>
 
   {% include "components/intro/intro.njk" %}
 </header>
