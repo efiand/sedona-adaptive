@@ -1,0 +1,130 @@
+.video {
+  padding: 32px 0 40px;
+  text-align: center;
+  border-top: 1px solid $color-back-darker;
+}
+
+.video__lead {
+  display: block;
+  margin: 0 28px 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.video__description {
+  margin: 0 28px 34px;
+  line-height: 24px;
+  color: $color-description;
+}
+
+.video__src-wrapper {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+
+  @include background-image("video", "jpg");
+
+  @media ($tablet) {
+    @include background-image("video-tablet", "jpg");
+  }
+
+  @media ($desktop) {
+    @include background-image("video-desktop", "jpg");
+  }
+}
+
+.video__src {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+}
+
+.video__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  padding: 23px 23px 18px;
+  background-color: $color-back;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -23px;
+    right: 23px;
+    left: 23px;
+    height: 3px;
+    background-color: rgba(#ffffff, 0.2);
+  }
+}
+
+.video__controls-item {
+  &--replay {
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    margin-right: 32px;
+    margin-left: auto;
+  }
+}
+
+.video__control {
+  height: 20px;
+  padding: 0;
+  color: #5c6870;
+  background-color: transparent;
+  border: none;
+
+  @include interactive;
+
+  &:hover,
+  &:focus {
+    color: $color-description;
+  }
+
+  &:active {
+    color: rgba($color-description, 0.3);
+  }
+
+  &--replay {
+    width: 16px;
+  }
+
+  &--subtitles {
+    width: 32px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+  }
+
+  &--pin {
+    position: absolute;
+    top: -27px;
+    left: 58px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+}
+
+.video__icon {
+  width: inherit;
+  height: inherit;
+  fill: currentColor;
+}

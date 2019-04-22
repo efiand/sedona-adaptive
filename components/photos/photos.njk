@@ -1,13 +1,13 @@
-<section class="photo">
+<section class="photos">
   <h2 class="visually-hidden">
     {{ params.heading }}
   </h2>
 
-  <ul class="photos__list">
+  <ul class="photos__list page__list">
     {% for photo in params.photos %}
       <li class="photos__item">
         {% set picture = photo.picture %}
-        {% include "components/picture/picture.njk" %}
+        {% include "components/_picture/picture.njk" %}
 
         <div class="photos__info">
           <h3 class="photos__name">
@@ -17,8 +17,8 @@
             {{ params.labels.author }}{{ photo.author }}
           </p>
 
-          <form class="photos__likes" action="params.action" method="post">
-            <button class="photos__like-btn" type="submit" name="like" value="{{ picture.img.alt }}">
+          <form class="photos__likes" action="{{ params.action }}" method="post">
+            <button class="photos__like" type="submit" name="like" value="{{ picture.img.alt }}">
               <span class="visually-hidden">
                 {{ params.labels.like }}
               </span>
