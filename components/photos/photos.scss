@@ -1,16 +1,63 @@
 .photos {
   margin: 26px 0 0;
+
+  @media ($tablet) {
+    margin: 0 60px;
+  }
+}
+
+.photos__list {
+  @media ($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .photos__item {
   padding: 22px 20px 17px;
   line-height: 24px;
   border-top: 1px solid $color-back-darker;
+
+  @media ($tablet) {
+    width: 50%;
+    padding: 0;
+    background-color: $color-back;
+    border: none;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(2n + 3) {
+    @media ($tablet) {
+      background-color: #eaeaea;
+    }
+  }
 }
 
 .photos__picture {
   height: 280px;
   margin: 0 0 15px;
+
+  @media ($tablet) {
+    height: 268px;
+  }
+
+  &--lead {
+    @media ($tablet) {
+      height: 400px;
+    }
+  }
+}
+
+.photos__info {
+  @media ($tablet) {
+    position: relative;
+    padding: 0 120px 8px 20px;
+  }
 }
 
 .photos__name {
@@ -27,6 +74,12 @@
 
 .photos__likes {
   display: flex;
+
+  @media ($tablet) {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+  }
 }
 
 .photos__like {
@@ -40,6 +93,10 @@
   border: none;
   cursor: pointer;
   opacity: 0.3;
+
+  @media ($tablet) {
+    margin-right: 10px;
+  }
 }
 
 .photos__count {

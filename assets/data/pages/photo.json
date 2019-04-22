@@ -16,7 +16,7 @@
             "author": "Борис",
             "likes": 1350,
             "picture": {
-              "classes": "photos__picture",
+              "classes": "photos__picture photos__picture--lead",
               "img": {
                 "src": "img/photo-1.jpg",
                 "alt": "Неродные просторы"

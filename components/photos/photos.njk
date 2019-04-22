@@ -5,7 +5,7 @@
 
   <ul class="photos__list page__list">
     {% for photo in params.photos %}
-      <li class="photos__item">
+      <li class="photos__item {{ "photos__item--lead" if loop.index === 1 }}">
         {% set picture = photo.picture %}
         {% include "components/_picture/picture.njk" %}
 

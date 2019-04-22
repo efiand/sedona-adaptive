@@ -1,7 +1,13 @@
 .video {
-  padding: 32px 0 40px;
+  position: relative;
+  padding: 32px 20px 40px;
   text-align: center;
   border-top: 1px solid $color-back-darker;
+
+  @media ($tablet) {
+    padding: 65px 60px 40px;
+    border: none;
+  }
 }
 
 .video__lead {
@@ -10,12 +16,22 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media ($tablet) {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
 }
 
 .video__description {
+  max-width: 420px;
   margin: 0 28px 34px;
   line-height: 24px;
   color: $color-description;
+
+  @media ($tablet) {
+    margin: 0 auto 74px;
+  }
 }
 
 .video__src-wrapper {
@@ -26,6 +42,8 @@
   @include background-image("video", "jpg");
 
   @media ($tablet) {
+    height: 500px;
+
     @include background-image("video-tablet", "jpg");
   }
 
@@ -50,6 +68,15 @@
   padding: 23px 23px 18px;
   background-color: $color-back;
 
+  @media ($tablet) {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+    padding: 36px 40px 32px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -58,6 +85,10 @@
     bottom: 100%;
     left: 0;
     background-color: rgba(0, 0, 0, 0.6);
+
+    @media ($tablet) {
+      content: none;
+    }
   }
 
   &::after {
@@ -68,17 +99,31 @@
     left: 23px;
     height: 3px;
     background-color: rgba(#ffffff, 0.2);
+
+    @media ($tablet) {
+      top: 45px;
+      right: 165px;
+      left: 92px;
+    }
   }
 }
 
 .video__controls-item {
   &--replay {
     margin-right: auto;
+
+    @media ($tablet) {
+      margin-right: 42px;
+    }
   }
 
   &--subtitles {
     margin-right: 32px;
     margin-left: auto;
+  }
+
+  &--pin {
+    margin: 0 0 0 50px;
   }
 }
 
@@ -88,6 +133,10 @@
   color: #5c6870;
   background-color: transparent;
   border: none;
+
+  @media ($tablet) {
+    color: #ffffff;
+  }
 
   @include interactive;
 
@@ -120,6 +169,11 @@
     height: 10px;
     background-color: #ffffff;
     border-radius: 50%;
+
+    @media ($tablet) {
+      position: relative;
+      top: -6px;
+    }
   }
 }
 
