@@ -11,6 +11,9 @@
   /* eslint-enable */
   /* eslint no-trailing-spaces: "off" */
 
+  // Исходные данные
+  //=require ../data/index.js
+
   // Клиентские модули
   //=require modules/**/*.js
 

@@ -6,6 +6,7 @@ class Header {
 
     this.toggler.classList.remove(`hidden`);
     this.menu.classList.add(`hidden`);
+
     setTimeout(() => {
       this.menu.classList.add(`header__nav-list--js`);
       this.menu.classList.add(`header__nav-list--closed`);
