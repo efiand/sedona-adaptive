@@ -102,10 +102,11 @@
       }
     },
     {
-      "name": "map",
+      "name": "yandex-map",
       "params": {
+        "id": "map",
         "poster": {
-          "classes": "map__poster",
+          "classes": "yandex-map__poster",
           "img": {
             "src": "img/map.jpg",
             "srcset": "img/map@2x.jpg 2x",
