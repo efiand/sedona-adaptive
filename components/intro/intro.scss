@@ -22,11 +22,13 @@
     background-color: rgba($color-accent-back, 0.33);
     background-repeat: no-repeat;
     background-position: 50% 100%;
+    background-size: 768px auto;
 
     @include background-image("intro-back", "jpg");
 
     @media ($tablet) {
       height: 290px;
+      background-size: cover;
 
       @include background-image("intro-back-desktop", "jpg");
     }
