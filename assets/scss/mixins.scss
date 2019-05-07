@@ -9,7 +9,6 @@
 }
 
 @mixin interactive {
-  outline: none;
   cursor: pointer;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;

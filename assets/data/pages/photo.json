@@ -10,12 +10,17 @@
           "author": "Автор фото: ",
           "like": "Поставить лайк"
         },
-        "likeIcon": "img/symbols.svg#like",
+        "likeIcon": {
+          "id": "img/symbols.svg#like",
+          "width": 22,
+          "height": 20
+        },
         "action": "https://echo.htmlacademy.ru",
         "photos": [
           {
             "author": "Борис",
             "likes": 1350,
+            "href": "#",
             "picture": {
               "classes": "photos__picture photos__picture--lead",
               "img": {
@@ -38,6 +43,7 @@
           {
             "author": "Сергей",
             "likes": 143,
+            "href": "#",
             "picture": {
               "classes": "photos__picture",
               "img": {
@@ -60,6 +66,7 @@
           {
             "author": "Петр",
             "likes": 96,
+            "href": "#",
             "picture": {
               "classes": "photos__picture",
               "img": {
@@ -83,6 +90,7 @@
             "src": "img/photo-4.jpg",
             "author": "Антон",
             "likes": 254,
+            "href": "#",
             "picture": {
               "classes": "photos__picture",
               "img": {
@@ -115,20 +123,25 @@
         "controls": [
           {
             "alias": "replay",
-            "title": "Заново"
+            "title": "Заново",
+            "width": 16,
+            "height": 20
           },
           {
             "alias": "pin",
-            "title": "Выбор кадра",
-            "noIcon": true
+            "title": "Выбор кадра"
           },
           {
             "alias": "subtitles",
-            "title": "Субтитры"
+            "title": "Субтитры",
+            "width": 32,
+            "height": 20
           },
           {
             "alias": "fullscreen",
-            "title": "Полноэкранный режим"
+            "title": "Полноэкранный режим",
+            "width": 20,
+            "height": 20
           }
         ]
       }

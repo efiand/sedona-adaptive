@@ -24,10 +24,10 @@
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+  }
 
-    input:checked + & {
-      opacity: 1;
-    }
+  input:checked + &::before {
+    opacity: 1;
   }
 
   &::after {

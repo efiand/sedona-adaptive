@@ -39,8 +39,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 27px;
-  height: 34px;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -53,7 +52,5 @@
 }
 
 .footer__developer-logo {
-  width: inherit;
-  height: inherit;
   fill: currentColor;
 }

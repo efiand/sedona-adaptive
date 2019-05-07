@@ -6,7 +6,9 @@
   "logoAlt": "Логотип Седоны",
   "toggleMenuText": "Показать или скрыть меню",
   "introImg": "img/emblem.svg",
-  "introAlt": "Эмблема Седоны",
+  "introImgWidth": 230,
+  "introImgHeight": 40,
+  "introImgAlt": "Эмблема Седоны",
   "menu": [
     {
       "url": "index.html",
@@ -50,6 +52,8 @@
     "label": "Разработано",
     "name": "HTML Academy",
     "logo": "img/symbols.svg#developer",
+    "logoWidth": 27,
+    "logoHeight": 34,
     "href": "https://htmlacademy.ru/intensive/adaptive"
   }
 }

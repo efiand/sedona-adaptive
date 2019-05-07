@@ -20,8 +20,8 @@
           <span class="visually-hidden">
             {{ control.title }}
           </span>
-          {% if not control.noIcon %}
-            <svg class="video__icon" role="presentation">
+          {% if control.width %}
+            <svg class="video__icon" role="presentation" width="{{ control.width }}" height="{{ control.height }}">
               <use xlink:href="img/symbols.svg#{{ control.alias }}" />
             </svg>
           {% endif %}

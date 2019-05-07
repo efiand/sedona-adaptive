@@ -101,6 +101,7 @@
 
 .photos__likes {
   display: flex;
+  align-items: flex-start;
 
   @media ($tablet) {
     position: absolute;
@@ -110,13 +111,12 @@
 }
 
 .photos__like {
-  width: 22px;
-  height: 20px;
   margin: 0 15px 0 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border: none;
+  outline: none;
 
   @include interactive;
 
@@ -147,9 +147,6 @@
 }
 
 .photos__like-icon {
-  width: inherit;
-  height: inherit;
-
   fill: currentColor;
 }
 

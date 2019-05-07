@@ -1,6 +1,7 @@
 <section class="intro {{ "intro--index" if layout.isIndex }}">
   <img class="intro__img {{ "intro__img--index" if layout.isIndex }}"
-    src="{{ layout.introImg }}" alt="{{ layout.introAlt }}">
+    width="{{ layout.introImgWidth }}" height="{{ layout.introImgHeight }}"
+    src="{{ layout.introImg }}" alt="{{ layout.introImgAlt }}">
 
   {% if layout.isIndex %}
     <h1 class="visually-hidden">
