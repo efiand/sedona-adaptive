@@ -3,6 +3,7 @@
     <a class="header__logo" {{ "href=\"index.html\"" if layout.isIndex }}>
       <picture>
         <source media="(min-width: 1200px)" srcset="{{ layout.logoSrcDesktop }}">
+        <source media="(min-width: 768px)" srcset="{{ layout.logoSrcTablet }}">
         <img src="{{ layout.logoSrc }}" alt="{{ layout.logoAlt }}">
       </picture>
     </a>

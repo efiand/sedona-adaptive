@@ -2,6 +2,7 @@
   "siteName": "Седона",
   "titleDelimiter": " › ",
   "logoSrc": "img/logo.svg",
+  "logoSrcTablet": "img/logo-tablet.svg",
   "logoSrcDesktop": "img/logo-desktop.svg",
   "logoAlt": "Логотип Седоны",
   "toggleMenuText": "Показать или скрыть меню",
