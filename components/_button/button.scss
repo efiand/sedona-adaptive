@@ -27,6 +27,7 @@
   &:disabled,
   &:disabled:hover,
   &:disabled:active {
+    color: $color-accent-text;
     background-color: $color-back-disabled;
   }
 }

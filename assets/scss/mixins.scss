@@ -15,6 +15,10 @@
   transition-property: color, opacity, background-color, border-color, box-shadow;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 @mixin background-image ($pict, $ext) {
@@ -30,55 +34,5 @@
 
   @media ($retina-webp) {
     background-image: url("../img/#{$pict}@2x.webp");
-  }
-}
-
-@mixin bg-icon {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons.svg");
-    background-repeat: no-repeat;
-  }
-}
-
-@mixin chevron-base ($thickness: 2px, $size: 100%, $color: inherit) {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  width: $size;
-  height: $size;
-  color: $color;
-  border-bottom: $thickness solid;
-  border-left: $thickness solid;
-  border-radius: $thickness;
-}
-
-@mixin cross-icon ($size, $thickness) {
-  box-sizing: border-box;
-  width: $size;
-  height: $size;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: ($size / 2) - ($thickness / 2);
-    left: 0;
-    width: $size;
-    height: $thickness;
-    background-color: currentColor;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
   }
 }
