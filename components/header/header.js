@@ -7,7 +7,7 @@ class Header {
 
     // Верхний отрицательный маргин по высоте меню
     this.negMargin = `-${this.menu.clientHeight}px`;
-    this.$el.style.marginTop = this.negMargin;
+    this.setMargin(this.negMargin);
 
     this.toggler.classList.remove(`hidden`);
     this.menu.classList.add(`header__nav-list--closed`);
@@ -20,6 +20,10 @@ class Header {
     this.toggler.addEventListener(`click`, () => {
       this.toggleHandler();
     });
+
+    window.addEventListener(`resize`, () => {
+      this.setMargin(this.isOpened ? 0 : this.negMargin);
+    });
   }
 
   toggleHandler() {
@@ -27,23 +31,25 @@ class Header {
       this.toggler.classList.remove(`header__toggler--closer`);
       this.toggler.classList.add(`header__toggler--opener`);
 
-      this.menu.classList.remove(`header__nav-list--opened`);
       this.menu.classList.add(`header__nav-list--closed`);
 
-      this.$el.style.marginTop = this.negMargin;
+      this.setMargin(this.negMargin);
 
     } else {
 
       this.toggler.classList.add(`header__toggler--closer`);
       this.toggler.classList.remove(`header__toggler--opener`);
 
-      this.menu.classList.add(`header__nav-list--opened`);
       this.menu.classList.remove(`header__nav-list--closed`);
 
-      this.$el.style.marginTop = 0;
+      this.setMargin(0);
     }
 
     this.isOpened = !this.isOpened;
+  }
+
+  setMargin(value) {
+    this.$el.style.marginTop = window.innerWidth < 768 ? value : 0;
   }
 }
 

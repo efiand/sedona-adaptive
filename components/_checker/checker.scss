@@ -42,23 +42,6 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  &:hover,
-  &:focus {
-    &::after {
-      background-color: $color-back-disabled;
-    }
-  }
-
-  &:active {
-    &::before {
-      opacity: 0.3;
-    }
-
-    &::after {
-      background-color: #d5d5d5;
-    }
-  }
-
   &--checkbox {
     &::before {
       top: 20px;
@@ -72,5 +55,22 @@
     &::after {
       border-radius: 5px;
     }
+  }
+}
+
+.checker__label:hover,
+input:focus + .checker__label {
+  &::after {
+    background-color: $color-back-disabled;
+  }
+}
+
+input:active + .checker__label {
+  &::before {
+    opacity: 0.3;
+  }
+
+  &::after {
+    background-color: #d5d5d5;
   }
 }
