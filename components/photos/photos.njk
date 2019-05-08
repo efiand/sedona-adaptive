@@ -7,7 +7,7 @@
     {% for photo in params.photos %}
       <li class="photos__item {{ "photos__item--lead" if loop.index === 1 }}">
         {% set picture = photo.picture %}
-        <a href="photo.href">
+        <a href="{{ photo.href }}">
           {% include "components/_picture/picture.njk" %}
         </a>
 

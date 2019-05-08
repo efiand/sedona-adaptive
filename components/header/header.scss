@@ -1,3 +1,9 @@
+.header {
+  &--js {
+    transition: margin-top 0.6s ease-in-out;
+  }
+}
+
 .header__nav {
   position: relative;
   font-size: 18px;
@@ -22,36 +28,15 @@
 }
 
 .header__nav-list {
-  transform-origin: 50% 0;
-
   @media ($tablet) {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &--js {
-    @media ($mobile) {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1;
-    }
-  }
-
   &--closed {
     @media ($mobile) {
-      transform: scaleY(0);
       visibility: hidden;
-      transition: transform 0.3s ease-in, visibility 0s 0.6s;
-    }
-  }
-
-  &--opened {
-    @media ($mobile) {
-      max-height: 100vh;
-      overflow: auto;
-      transition: transform 0.6s ease-out;
+      transition: visibility 0s 0.6s;
     }
   }
 }
