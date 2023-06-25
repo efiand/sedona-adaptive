@@ -4,7 +4,6 @@ const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`test:scss`, () => {
   return gulp.src(settings.src.scss)
-    .pipe(plugins.plumber())
     .pipe(plugins.stylelint({
       reporters: [{
         console: true,

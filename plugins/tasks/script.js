@@ -4,7 +4,6 @@ const { gulp, plugins, settings } = require(`../../store`);
 
 gulp.task(`script`, () => {
   return gulp.src(`assets/js/script.js`)
-    .pipe(plugins.plumber())
     .pipe(plugins.include())
     .pipe(plugins.eslint())
     .pipe(plugins.eslint.format())

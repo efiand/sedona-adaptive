@@ -4,7 +4,6 @@ const { gulp, plugins, filters, settings } = require(`../../store`);
 
 gulp.task(`html`, () => {
   return gulp.src(`pages/**/*.njk`)
-    .pipe(plugins.plumber())
     .pipe(plugins.data((filename) => {
       const name = filename.path.replace(filename.base, ``);
 

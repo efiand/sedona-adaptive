@@ -6,7 +6,6 @@ const src = {
   scss: [`**/*.scss`, `!node_modules/**/*.scss`],
   img: `assets/img/**/*.{jpg,png,svg}`,
   webp: [`assets/img/**/*.{jpg,png}`, `static/img/**/*.{jpg,png}`],
-  icons: `assets/icons/**/*.svg`,
   symbols: `assets/symbols/**/*.svg`,
   static: [`static/**/*`, `static/**/.*`],
   staticText: `static/**/*.{html,css,txt,md,svg,js,json,php,xml}`,
@@ -26,7 +25,6 @@ module.exports = {
         `html`,
         `img`,
         `webp`,
-        `icons`,
         `symbols`,
         `static`
       ],
