@@ -1,0 +1,33 @@
+<header class="header page__list">
+  <nav class="header__nav">
+    <a class="header__logo" {{ "href=\"index.html\"" if not isIndex }}>
+      <picture>
+        <source media="(min-width: 1200px)" srcset="{{ logoSrcDesktop }}">
+        <source media="(min-width: 768px)" srcset="{{ logoSrcTablet }}">
+        <img src="{{ logoSrc }}" alt="{{ logoAlt }}">
+      </picture>
+    </a>
+
+    <ul class="header__nav-list page__list">
+      {% for link in menu %}
+        <li class="header__nav-item">
+          <a class="button header__nav-link
+            {{ "header__nav-link--active" if link.url === page + ".html" }}
+            {{ "header__nav-link--first" if loop.index === 1 }}
+            {{ "header__nav-link--last" if loop.index === loop.length }}"
+            href="{{ link.url }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <button class="header__toggler hidden">
+    <span class="visually-hidden">
+      {{ toggleMenuText }}
+    </span>
+  </button>
+
+  {% include "src/html/components/intro.njk" %}
+</header>

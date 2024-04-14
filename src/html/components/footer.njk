@@ -1,0 +1,19 @@
+<footer class="footer">
+  <a href="{{ visit.href }}" class="footer__visit-link">
+    {{ visit.text }}
+  </a>
+
+  {% set classes = "footer__socials" %}
+  {% include "src/html/components/socials.njk" %}
+
+  <p class="footer__developer">
+    {{ developer.label }}
+
+    <a class="footer__developer-link" href="{{ developer.href }}">
+      <svg class="footer__developer-logo" aria-label="{{ developer.name }}"
+        width="{{ developer.logoWidth }}" height="{{ developer.logoHeight }}">
+        <use xlink:href="{{ developer.logo }}"/>
+      </svg>
+    </a>
+  </p>
+</footer>

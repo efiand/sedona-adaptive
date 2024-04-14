@@ -1,0 +1,44 @@
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.socials__button {
+	position: relative;
+	width: 46px;
+	height: 48px;
+	margin: 0 3px 6px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-image: url('/img/icons.svg');
+		transform: translate(-50%, -50%);
+		transition: inherit;
+	}
+
+	&:active::before {
+		opacity: 0.3;
+	}
+
+	&--twitter::before {
+		width: 18px;
+		height: 15px;
+		background-position: -10px -438px;
+	}
+
+	&--facebook::before {
+		width: 9px;
+		height: 19px;
+		background-position: -10px -399px;
+	}
+
+	&--youtube::before {
+		width: 20px;
+		height: 14px;
+		background-position: -10px -473px;
+	}
+}

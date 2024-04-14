@@ -1,0 +1,156 @@
+.photos {
+	margin: 26px 0 0;
+
+	@include tablet-desktop {
+		margin: 0 60px;
+	}
+
+	@include desktop {
+		margin: 70px 0 0;
+	}
+}
+
+.photos__list {
+	@include tablet-desktop {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.photos__item {
+	position: relative;
+	padding: 22px 20px 17px;
+	line-height: 24px;
+	border-top: 1px solid $color-back-darker;
+
+	@include tablet-desktop {
+		width: 50%;
+		padding: 0;
+		background-color: $color-back;
+		border: none;
+	}
+
+	@include desktop {
+		width: calc(100% / 3);
+	}
+
+	&--lead {
+		@include tablet-desktop {
+			width: 100%;
+		}
+
+		@include desktop {
+			width: 100%;
+		}
+	}
+
+	&:nth-child(2n + 3) {
+		@include tablet-desktop {
+			background-color: #eaeaea;
+		}
+	}
+}
+
+.photos__picture {
+	height: 280px;
+
+	@include tablet-desktop {
+		height: 268px;
+	}
+
+	&--lead {
+		@include tablet-desktop {
+			height: 400px;
+		}
+	}
+}
+
+.photos__info {
+	padding: 15px 0 0;
+
+	@include tablet-desktop {
+		position: relative;
+		padding: 15px 120px 8px 20px;
+	}
+
+	@include desktop {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		color: $color-white;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+.photos__name {
+	margin: 0;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.photos__description {
+	margin: 0 0 8px;
+	color: $color-description;
+	text-transform: none;
+
+	@include desktop {
+		color: inherit;
+	}
+}
+
+.photos__likes {
+	display: flex;
+	align-items: flex-start;
+
+	@include tablet-desktop {
+		position: absolute;
+		top: 28px;
+		right: 20px;
+	}
+}
+
+.photos__like {
+	margin: 0 15px 0 0;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.3);
+	background-color: transparent;
+	border: none;
+
+	@include interactive;
+
+	@include tablet-desktop {
+		margin-right: 10px;
+	}
+
+	@include desktop {
+		color: $color-white;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-description;
+
+		@include desktop {
+			color: rgba($color-white, 0.6);
+		}
+	}
+
+	&:active {
+		color: rgba($color-description, 0.3);
+
+		@include desktop {
+			color: rgba($color-white, 0.3);
+		}
+	}
+}
+
+.photos__like-icon {
+	fill: currentColor;
+}
+
+.photos__count {
+	min-width: 32px;
+	max-width: 100px;
+	margin: 0;
+}

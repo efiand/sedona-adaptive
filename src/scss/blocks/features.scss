@@ -1,0 +1,107 @@
+.features {
+	padding: 34px 20px 10px;
+
+	@include tablet-desktop {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 60px 0 0;
+	}
+
+	@include desktop {
+		padding: 60px 0 20px;
+	}
+}
+
+.features__item {
+	position: relative;
+	padding: 0 0 28px 50px;
+
+	@include tablet-desktop {
+		box-sizing: border-box;
+		width: calc(100% / 3);
+		padding: 100px 45px 62px;
+		text-align: center;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url('/img/icons.svg');
+		background-size: auto 250px;
+
+		@include tablet-desktop {
+			left: 50%;
+			background-size: auto;
+			transform: translateX(-50%);
+		}
+	}
+
+	&--house::before {
+		top: -8px;
+		left: 2px;
+		width: 37px;
+		height: 37px;
+		background-position: -5px -6px;
+
+		@include tablet-desktop {
+			top: 0;
+			width: 75px;
+			height: 73px;
+			background-position: -10px -10px;
+		}
+	}
+
+	&--gifts::before {
+		top: -10px;
+		left: 5px;
+		width: 32px;
+		height: 38px;
+		background-position: -5px -52px;
+
+		@include tablet-desktop {
+			top: -2px;
+			width: 63px;
+			height: 76px;
+			background-position: -10px -103px;
+		}
+	}
+
+	&--eat::before {
+		top: -4px;
+		left: -2px;
+		width: 40px;
+		height: 35px;
+		background-position: -5px -100px;
+
+		@include tablet-desktop {
+			top: 3px;
+			width: 76px;
+			height: 70px;
+			background-position: -10px -199px;
+		}
+	}
+
+	&--order-3 {
+		@include tablet-desktop {
+			order: 3;
+		}
+	}
+}
+
+.features__heading {
+	display: block;
+	margin: 0 0 14px;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000000;
+
+	@include tablet-desktop {
+		margin: 0 0 20px;
+		font-size: 21px;
+	}
+}
+
+.features__description {
+	margin: 0;
+	color: $color-description;
+}

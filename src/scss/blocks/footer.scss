@@ -1,0 +1,54 @@
+.footer {
+	padding: 36px 60px 30px;
+
+	@include tablet-desktop {
+		display: flex;
+	}
+
+	@include desktop {
+		padding: 36px 120px 30px;
+	}
+}
+
+.footer__visit-link {
+	display: table;
+	margin: 0 auto 36px;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+	text-decoration: none;
+
+	@include tablet-desktop {
+		margin: 8px auto 0 0;
+	}
+}
+
+.footer__developer {
+	position: relative;
+	display: table;
+	margin: 35px auto 0;
+	padding: 5px 40px 0 0;
+
+	@include tablet-desktop {
+		margin: 7px 0 0 auto;
+	}
+}
+
+.footer__developer-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&:hover,
+	&:focus {
+		color: $color-accent-back;
+	}
+
+	&:active {
+		color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+.footer__developer-logo {
+	fill: currentColor;
+}

@@ -1,0 +1,6 @@
+<picture class="picture {{ picture.classes }}">
+  {% for source in picture.medias %}
+    <source media="{{ source.query }}" srcset="{{ source.srcset }}">
+  {% endfor %}
+  <img class="picture__img {{ picture.img.classes }}" src="{{ picture.img.src }}" srcset="{{ picture.img.srcset }}" alt="{{ picture.img.alt }}">
+</picture>

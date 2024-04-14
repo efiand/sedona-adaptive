@@ -1,0 +1,25 @@
+{% set attrs = "name=\"" + field.name + "\" id=\"" + field.name + "\" placeholder=\"" + field.placeholder + "\"" %}
+{% if field.required %}
+  {% set attrs = attrs + " required" %}
+{% endif %}
+
+{% if field.icon %}
+  {% set classes = classes + " field--" + field.icon %}
+  {% set labelClass = "field__label field__label--with-icon" %}
+  {% set inputModifier = "field__input--with-icon" %}
+{% elif field.hideLabel %}
+  {% set labelClass = "visually-hidden" %}
+{% else %}
+  {% set labelClass = "field__label" %}
+{% endif %}
+
+<li class="field {{ classes }}">
+  <label class="{{ labelClass }}" for="{{ field.name }}">
+    {{ field.label }}
+  </label>
+  {% if field.type === "textarea" %}
+    <textarea class="field__input field__input--message" {{ attrs }}></textarea>
+  {% else %}
+    <input class="field__input {{ inputModifier }}" type="{{ field.type }}" {{ attrs }}>
+  {% endif %}
+</li>

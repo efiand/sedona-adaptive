@@ -1,0 +1,46 @@
+.search-offer {
+	max-width: 458px;
+	margin: 0 auto;
+	padding: 26px 20px 48px;
+	text-align: center;
+
+	@include tablet-desktop {
+		padding: 56px 20px 60px;
+	}
+
+	@include desktop {
+		padding: 56px 20px 65px;
+	}
+}
+
+.search-offer__lead {
+	display: block;
+	margin: 0 0 20px;
+	font-size: 21px;
+	line-height: 26px;
+
+	@include tablet-desktop {
+		margin: 0 0 32px;
+		font-size: 30px;
+	}
+}
+
+.search-offer__description {
+	margin: 0 0 34px;
+	line-height: 24px;
+	color: $color-description;
+
+	@include tablet-desktop {
+		margin: 0 0 40px;
+	}
+
+	@include desktop {
+		margin: 0 0 48px;
+	}
+}
+
+.search-offer__button {
+	padding: 16px;
+	font-size: 21px;
+	line-height: 26px;
+}

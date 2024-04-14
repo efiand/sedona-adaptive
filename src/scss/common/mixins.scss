@@ -1,0 +1,54 @@
+@mixin font-face ($family, $weight, $style, $url) {
+	@font-face {
+		font-weight: $weight;
+		font-family: '#{$family}';
+		font-style: $style;
+		src: url('/fonts/#{$url}.woff2') format('woff2');
+		font-display: swap;
+	}
+}
+
+@mixin interactive {
+	cursor: pointer;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.3s;
+	transition-property: color, opacity, background-color, border-color, box-shadow;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin mobile-tablet {
+	@media (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin tablet-desktop {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin background-image ($pict) {
+	background-image: url('/img/#{$pict}.webp');
+
+	@media (min-resolution: 1.5dppx) {
+		background-image: url('/img/#{$pict}@2x.webp');
+	}
+}

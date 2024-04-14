@@ -1,0 +1,191 @@
+.video {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 32px 0 40px;
+	text-align: center;
+	border-top: 1px solid $color-back-darker;
+
+	@include tablet-desktop {
+		padding: 65px 60px 40px;
+		border: none;
+	}
+
+	@include desktop {
+		margin-bottom: 45px;
+		padding-top: 70px;
+	}
+}
+
+.video__lead {
+	display: block;
+	margin: 0 28px 28px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 26px;
+
+	@include tablet-desktop {
+		margin-bottom: 32px;
+		font-size: 30px;
+	}
+}
+
+.video__description {
+	max-width: 420px;
+	margin: 0 auto 34px;
+	padding: 0 28px;
+	line-height: 24px;
+	color: $color-description;
+
+	@include tablet-desktop {
+		margin: 0 auto 74px;
+	}
+
+	@include desktop {
+		margin-bottom: 70px;
+	}
+}
+
+.video__src-wrapper {
+	position: relative;
+	height: 200px;
+	background-color: #000000;
+	background-size: cover;
+
+	@include background-image('video');
+
+	@include tablet-desktop {
+		height: 500px;
+
+		@include background-image('video-tablet');
+	}
+
+	@include desktop {
+		@include background-image('video-desktop');
+	}
+}
+
+.video__src {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: inherit;
+}
+
+.video__controls {
+	position: relative;
+	display: flex;
+	margin: 0 20px;
+	padding: 23px 23px 18px;
+	background-color: $color-back;
+
+	@include tablet-desktop {
+		position: absolute;
+		right: 40px;
+		bottom: 40px;
+		left: 40px;
+		padding: 35px 43px 32px 34px;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -45px 0 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+
+		@include tablet-desktop {
+			content: none;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: -23px;
+		right: 23px;
+		left: 23px;
+		height: 3px;
+		background-color: rgba($color-white, 0.2);
+
+		@include tablet-desktop {
+			top: 45px;
+			right: 168px;
+			left: 92px;
+		}
+	}
+}
+
+.video__controls-item {
+	&--replay {
+		margin-right: auto;
+
+		@include tablet-desktop {
+			margin-right: 42px;
+		}
+	}
+
+	&--subtitles {
+		margin-right: 32px;
+		margin-left: auto;
+	}
+
+	&--pin {
+		position: absolute;
+		top: -33px;
+		left: 20px;
+		margin: 0 0 0 38px;
+
+		@include tablet-desktop {
+			position: static;
+			margin: 0 0 0 112px;
+		}
+	}
+}
+
+.video__control {
+	padding: 0;
+	color: #5c6870;
+	background-color: transparent;
+	border: none;
+
+	@include tablet-desktop {
+		color: $color-white;
+	}
+
+	@include interactive;
+
+	&:hover,
+	&:focus {
+		color: $color-description;
+
+		@include tablet-desktop {
+			color: rgba($color-white, 0.6);
+		}
+	}
+
+	&:active {
+		color: rgba($color-description, 0.3);
+
+		@include tablet-desktop {
+			color: rgba($color-white, 0.3);
+		}
+	}
+
+	&--pin {
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+		background-color: $color-white;
+		border-radius: 50%;
+
+		@include tablet-desktop {
+			position: static;
+		}
+	}
+}
+
+.video__icon {
+	fill: currentColor;
+}

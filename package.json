@@ -1,70 +1,36 @@
 {
-  "private": true,
-  "scripts": {
-    "test": "htmlhint --config .nunjuckshintrc **/*.njk && gulp test",
-    "test:build": "htmlhint build/**/*.html",
-    "start": "npm test && gulp dev",
-    "build": "npm test && cross-env NODE_ENV=production gulp build && npm run test:build",
-    "deploy": "npm run build && gh-pages -d build",
-    "push": "git add . && git commit -m \"edit\" && git push"
-  },
-  "devDependencies": {
-    "@babel/core": "7.4.0",
-    "@babel/preset-env": "7.4.2",
-    "autoprefixer": "9.5.0",
-    "browser-sync": "2.26.3",
-    "cross-env": "5.2.0",
-    "del": "3.0.0",
-    "eslint-config-htmlacademy": "0.5.2",
-    "gh-pages": "2.0.1",
-    "gulp": "4.0.0",
-    "gulp-babel": "8.0.0",
-    "gulp-csso": "3.0.1",
-    "gulp-data": "1.3.1",
-    "gulp-eslint": "5.0.0",
-    "gulp-htmlmin": "5.0.1",
-    "gulp-if": "2.0.2",
-    "gulp-imagemin": "5.0.3",
-    "gulp-include": "2.3.1",
-    "gulp-lintspaces": "1.0.1",
-    "gulp-load-plugins": "1.5.0",
-    "gulp-nunjucks-render": "2.2.3",
-    "gulp-postcss": "9.0.1",
-    "gulp-remark-lint-dko": "1.0.2",
-    "gulp-rename": "1.4.0",
-    "gulp-sass": "5.1.0",
-    "gulp-stylelint": "13.0.0",
-    "gulp-svgstore": "7.0.1",
-    "gulp-uglify": "3.0.1",
-    "gulp-webp": "4.0.1",
-    "htmlhint": "0.11.0",
-    "imagemin-jpegoptim": "6.0.0",
-    "picturefill": "3.0.3",
-    "postcss": "8.4.24",
-    "postcss-sort-media-queries": "5.2.0",
-    "require-dir": "1.2.0",
-    "sass": "1.63.6",
-    "stylelint": "13.0.0",
-    "stylelint-config-htmlacademy": "0.1.3",
-    "stylelint-order": "4.1.0",
-    "svg4everybody": "2.1.9"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": false
-        }
-      ]
-    ]
-  },
-  "browserslist": [
-    "last 6 version",
-    "> 0.2%",
-    "not dead"
-  ],
-  "dependencies": {
-    "cheerio": "1.0.0-rc.3"
-  }
+	"name": "sedona-adaptive",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"preview": "vite preview",
+		"build": "vite build",
+		"stylelint": "stylelint src/**/*.scss --fix",
+		"eslint": "eslint . --ext .js,.cjs --fix --quiet --ignore-path .gitignore",
+		"lint": "npm run eslint && npm run stylelint"
+	},
+	"devDependencies": {
+		"@mapbox/stylelint-processor-arbitrary-tags": "0.4.0",
+		"@rushstack/eslint-patch": "1.3.3",
+		"@stylistic/eslint-plugin": "1.6.3",
+		"@stylistic/stylelint-config": "1.0.1",
+		"autoprefixer": "10.4.18",
+		"eslint": "8.49.0",
+		"postcss-scss": "4.0.9",
+		"postcss-sort-media-queries": "5.2.0",
+		"pre-commit": "1.2.2",
+		"sass": "1.71.1",
+		"stylelint": "16.2.1",
+		"stylelint-config-standard": "36.0.0",
+		"stylelint-order-htmlacademy": "2.1.0",
+		"vite": "5.2.8",
+		"vite-plugin-html": "3.2.2",
+		"vite-plugin-nunjucks": "0.2.0"
+	},
+	"pre-commit": "lint",
+	"browserslist": [
+		"> 1%",
+		"last 2 version"
+	]
 }

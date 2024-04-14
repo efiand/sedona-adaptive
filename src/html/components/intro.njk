@@ -1,0 +1,18 @@
+<section class="intro {{ "intro--index" if isIndex }}">
+  <img class="intro__img {{ "intro__img--index" if isIndex }}"
+    width="{{ introImgWidth }}" height="{{ introImgHeight }}"
+    src="{{ introImg }}" alt="{{ introImgAlt }}">
+
+  {% if isIndex %}
+    <h1 class="visually-hidden">
+      {{ siteName }}
+    </h1>
+  {% else %}
+    <h1 class="intro__heading">
+      {{ pageTitle }}
+    </h1>
+    <p class="intro__description">
+      {{ pageDescription }}
+    </p>
+  {% endif %}
+</section>

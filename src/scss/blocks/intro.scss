@@ -1,0 +1,158 @@
+.intro {
+	position: relative;
+	padding: 196px 0 0;
+	border-top: 54px solid transparent;
+
+	@include tablet-desktop {
+		padding: 365px 0 0;
+		border: none;
+	}
+
+	@include desktop {
+		padding: 412px 0 0;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 160px;
+		background-color: rgba($color-accent-back, 0.33);
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+		background-size: 768px auto;
+
+		@include background-image('intro-back');
+
+		@include tablet-desktop {
+			height: 290px;
+			background-size: cover;
+
+			@include background-image('intro-back-desktop');
+		}
+
+		@include desktop {
+			height: 300px;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 134px;
+		left: 0;
+		width: 100%;
+		height: 26px;
+		background-image: url('/img/intro-decor.svg');
+		background-size: 100% 26px;
+
+		@include tablet-desktop {
+			top: 234px;
+			height: 56px;
+			background-image: url('/img/intro-decor-tablet.svg');
+			background-size: 100% 56px;
+		}
+
+		@include desktop {
+			top: 244px;
+			background-image: url('/img/intro-decor-desktop.svg');
+		}
+	}
+
+	&--index {
+		padding: 430px 0 0;
+
+		@include tablet-desktop {
+			padding: 568px 0 0;
+		}
+
+		@include desktop {
+			padding: 568px 0 0;
+		}
+
+		&::before {
+			height: 390px;
+			background-position: 50% 0;
+
+			@include tablet-desktop {
+				height: 518px;
+			}
+
+			@include desktop {
+				height: 518px;
+			}
+		}
+
+		&::after {
+			top: 364px;
+
+			@include tablet-desktop {
+				top: 462px;
+			}
+
+			@include desktop {
+				top: 462px;
+			}
+		}
+	}
+}
+
+.intro__img {
+	position: absolute;
+	top: 52px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@include tablet-desktop {
+		top: 95px;
+		width: 460px;
+	}
+
+	@include desktop {
+		top: 102px;
+	}
+
+	&--index {
+		top: 90px;
+
+		@include tablet-desktop {
+			top: 78px;
+		}
+
+		@include desktop {
+			top: 80px;
+		}
+	}
+}
+
+.intro__heading {
+	margin: 0 24px 28px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+
+	@include tablet-desktop {
+		margin: 0 24px 32px;
+		font-size: 30px;
+	}
+}
+
+.intro__description {
+	max-width: 445px;
+	margin: 0 auto 16px;
+	padding: 0 24px;
+	line-height: 24px;
+	text-align: center;
+	color: $color-description;
+
+	@include tablet-desktop {
+		margin-bottom: 68px;
+	}
+
+	@include desktop {
+		margin-bottom: 58px;
+	}
+}

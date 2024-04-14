@@ -1,0 +1,15 @@
+@include font-face('PT Sans', 400, normal, 'ptsans');
+@include font-face('PT Sans', 700, normal, 'ptsansbold');
+
+a {
+	color: inherit;
+	text-decoration-skip-ink: none;
+
+	@include interactive;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
